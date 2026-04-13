@@ -1,6 +1,7 @@
 "use client";
 
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+import { useI18n } from "@/lib/i18n";
 
 const COLORS: Record<string, string> = {
   S0: "#9ca3af",
@@ -11,12 +12,13 @@ const COLORS: Record<string, string> = {
 };
 
 export default function SeverityChart({ data }: { data: Record<string, number> }) {
+  const { t } = useI18n();
   const chartData = Object.entries(data).map(([k, v]) => ({ name: k, value: v }));
 
   return (
     <div className="rounded-xl bg-[var(--card-bg)] border border-[var(--border)] p-5 shadow-[var(--card-shadow)]">
       <h3 className="text-sm font-semibold text-[var(--text)] mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
-        Severity Distribution
+        {t("chart.severity")}
       </h3>
       <ResponsiveContainer width="100%" height={220}>
         <PieChart>

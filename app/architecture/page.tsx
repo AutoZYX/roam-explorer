@@ -1,3 +1,5 @@
+"use client";
+
 import {
   LAYER_CONFIG,
   TAXONOMY,
@@ -5,15 +7,15 @@ import {
   SEVERITY_CONFIG,
   URGENCY_CONFIG,
 } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 
 export default function ArchitecturePage() {
+  const { t, lang } = useI18n();
+
   return (
     <div>
-      <h1 className="text-3xl mb-2">Reference Architecture</h1>
-      <p className="text-[var(--muted)] mb-8">
-        Three-layer decision model for handling L4+ robotaxi operational anomalies.
-        Core principle: AI handles routine anomalies autonomously; humans handle the exceptions.
-      </p>
+      <h1 className="text-3xl mb-2">{t("arch.title")}</h1>
+      <p className="text-[var(--muted)] mb-8">{t("arch.desc")}</p>
 
       {/* Three layers */}
       <div className="space-y-4 mb-12">
@@ -26,9 +28,11 @@ export default function ArchitecturePage() {
             <div className="flex items-start justify-between mb-2">
               <div>
                 <h2 className="text-lg">
-                  Layer {num}: {cfg.name}
+                  Layer {num}: {lang === "zh" ? cfg.cn : cfg.name}
                 </h2>
-                <p className="text-sm text-[var(--muted)]">{cfg.cn}</p>
+                <p className="text-sm text-[var(--muted)]">
+                  {lang === "zh" ? cfg.name : cfg.cn}
+                </p>
               </div>
               <div className="text-right">
                 <span
@@ -40,14 +44,16 @@ export default function ArchitecturePage() {
               </div>
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-[var(--muted)]">
-              <span>Latency: {cfg.latency}</span>
               <span>
-                Human role:{" "}
+                {t("arch.latency")}: {cfg.latency}
+              </span>
+              <span>
+                {t("arch.humanRole")}:{" "}
                 {num === "1"
-                  ? "None"
+                  ? t("arch.none")
                   : num === "2"
-                  ? "Confirm / Override"
-                  : "Direct control"}
+                  ? t("arch.confirm")
+                  : t("arch.direct")}
               </span>
             </div>
           </div>
@@ -55,15 +61,21 @@ export default function ArchitecturePage() {
       </div>
 
       {/* Scenario-to-Layer Mapping */}
-      <h2 className="text-xl mb-4">Scenario-to-Layer Mapping</h2>
+      <h2 className="text-xl mb-4">{t("arch.mapping")}</h2>
       <div className="overflow-x-auto mb-12">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="border-b border-[var(--border)]">
               <th className="text-left py-2 pr-4 text-[var(--muted)] font-medium">ID</th>
-              <th className="text-left py-2 pr-4 text-[var(--muted)] font-medium">Scenario</th>
-              <th className="text-center py-2 px-3 text-[var(--muted)] font-medium">Primary</th>
-              <th className="text-center py-2 px-3 text-[var(--muted)] font-medium">Escalation</th>
+              <th className="text-left py-2 pr-4 text-[var(--muted)] font-medium">
+                {t("arch.scenario")}
+              </th>
+              <th className="text-center py-2 px-3 text-[var(--muted)] font-medium">
+                {t("arch.primary")}
+              </th>
+              <th className="text-center py-2 px-3 text-[var(--muted)] font-medium">
+                {t("arch.escHeader")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -73,7 +85,9 @@ export default function ArchitecturePage() {
                   <td className="py-2 pr-4 font-mono font-medium" style={{ color: `var(--text)` }}>
                     {sub.id}
                   </td>
-                  <td className="py-2 pr-4">{sub.name_en}</td>
+                  <td className="py-2 pr-4">
+                    {lang === "zh" ? sub.name_cn : sub.name_en}
+                  </td>
                   <td className="py-2 px-3 text-center">
                     <span
                       className="inline-block px-2 py-0.5 rounded text-xs font-medium"
@@ -108,7 +122,7 @@ export default function ArchitecturePage() {
       </div>
 
       {/* Urgency-Severity Matrix */}
-      <h2 className="text-xl mb-4">Urgency-Severity Matrix</h2>
+      <h2 className="text-xl mb-4">{t("arch.matrix")}</h2>
       <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
@@ -118,7 +132,9 @@ export default function ArchitecturePage() {
                 <th key={u} className="py-2 px-3 text-center text-[var(--muted)] font-medium">
                   {u}
                   <br />
-                  <span className="text-xs font-normal">{URGENCY_CONFIG[u].label}</span>
+                  <span className="text-xs font-normal">
+                    {lang === "zh" ? URGENCY_CONFIG[u].cn : URGENCY_CONFIG[u].label}
+                  </span>
                 </th>
               ))}
             </tr>
@@ -129,7 +145,7 @@ export default function ArchitecturePage() {
                 <td className="py-2 pr-4 font-medium">
                   {s}{" "}
                   <span className="text-xs text-[var(--muted)] font-normal">
-                    {SEVERITY_CONFIG[s].label}
+                    {lang === "zh" ? SEVERITY_CONFIG[s].cn : SEVERITY_CONFIG[s].label}
                   </span>
                 </td>
                 {Object.keys(URGENCY_CONFIG).map((u) => {

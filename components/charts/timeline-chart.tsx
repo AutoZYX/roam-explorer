@@ -1,8 +1,10 @@
 "use client";
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { useI18n } from "@/lib/i18n";
 
 export default function TimelineChart({ data }: { data: Record<string, number> }) {
+  const { t } = useI18n();
   const chartData = Object.entries(data)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([k, v]) => ({ year: k, count: v }));
@@ -10,7 +12,7 @@ export default function TimelineChart({ data }: { data: Record<string, number> }
   return (
     <div className="rounded-xl bg-[var(--card-bg)] border border-[var(--border)] p-5 shadow-[var(--card-shadow)]">
       <h3 className="text-sm font-semibold text-[var(--text)] mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
-        Incidents by Year
+        {t("chart.timeline")}
       </h3>
       <ResponsiveContainer width="100%" height={220}>
         <BarChart data={chartData}>

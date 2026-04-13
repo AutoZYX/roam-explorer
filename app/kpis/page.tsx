@@ -1,13 +1,15 @@
+"use client";
+
 import { KPIS } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 
 export default function KPIsPage() {
+  const { t } = useI18n();
+
   return (
     <div>
-      <h1 className="text-3xl mb-2">KPI Definitions</h1>
-      <p className="text-[var(--muted)] mb-8">
-        8 key performance indicators for evaluating robotaxi remote operations platforms.
-        Measurable, comparable across operators, and actionable.
-      </p>
+      <h1 className="text-3xl mb-2">{t("kpi.title")}</h1>
+      <p className="text-[var(--muted)] mb-8">{t("kpi.desc")}</p>
 
       <div className="space-y-6">
         {KPIS.map((kpi) => (
@@ -36,25 +38,25 @@ export default function KPIsPage() {
                 <thead>
                   <tr className="border-b border-[var(--border)]">
                     <th className="text-left py-1.5 pr-4 text-[var(--muted)] font-medium text-xs">
-                      Category
+                      {t("kpi.category")}
                     </th>
                     <th className="text-center py-1.5 px-3 text-[var(--muted)] font-medium text-xs">
-                      Target
+                      {t("kpi.target")}
                     </th>
                     <th className="text-center py-1.5 px-3 text-[var(--muted)] font-medium text-xs">
-                      Stretch
+                      {t("kpi.stretch")}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {kpi.targets.map((t, i) => (
+                  {kpi.targets.map((tgt, i) => (
                     <tr key={i} className="border-b border-[var(--border)]/50">
-                      <td className="py-1.5 pr-4 text-sm">{t.label}</td>
+                      <td className="py-1.5 pr-4 text-sm">{tgt.label}</td>
                       <td className="py-1.5 px-3 text-center font-mono text-sm font-medium">
-                        {t.target}
+                        {tgt.target}
                       </td>
                       <td className="py-1.5 px-3 text-center font-mono text-sm text-[var(--muted)]">
-                        {t.stretch}
+                        {tgt.stretch}
                       </td>
                     </tr>
                   ))}

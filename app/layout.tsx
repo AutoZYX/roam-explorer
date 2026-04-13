@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import SWRegister from "@/components/sw-register";
+import { I18nProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "ROAM Explorer — L4 Robotaxi Incident Database",
@@ -33,9 +34,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Nav />
-        <main className="mx-auto max-w-5xl w-full px-4 py-8 flex-1">{children}</main>
-        <Footer />
+        <I18nProvider>
+          <Nav />
+          <main className="mx-auto max-w-5xl w-full px-4 py-8 flex-1">{children}</main>
+          <Footer />
+        </I18nProvider>
         <SWRegister />
       </body>
     </html>

@@ -3,19 +3,21 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-const LINKS = [
-  { href: "/", label: "Dashboard" },
-  { href: "/incidents", label: "Incidents" },
-  { href: "/taxonomy", label: "Taxonomy" },
-  { href: "/architecture", label: "Architecture" },
-  { href: "/kpis", label: "KPIs" },
-  { href: "/ask", label: "Ask ROAM" },
-];
+import { useI18n, LangToggle } from "@/lib/i18n";
 
 export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { t } = useI18n();
+
+  const LINKS = [
+    { href: "/", label: t("nav.dashboard") },
+    { href: "/incidents", label: t("nav.incidents") },
+    { href: "/taxonomy", label: t("nav.taxonomy") },
+    { href: "/architecture", label: t("nav.architecture") },
+    { href: "/kpis", label: t("nav.kpis") },
+    { href: "/ask", label: t("nav.ask") },
+  ];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur">
@@ -42,33 +44,32 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
+          <LangToggle />
           <a
-            href="https://github.com/zyx312/ROAM"
+            href="https://github.com/AutoZYX/ROAM"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-[var(--muted)] hover:text-[var(--text)] text-sm no-underline"
+            className="ml-1 text-[var(--muted)] hover:text-[var(--text)] text-sm no-underline"
           >
             GitHub
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-[var(--muted)]"
-          aria-label="Toggle menu"
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
-            {open ? (
-              <path d="M4 4l12 12M16 4L4 16" />
-            ) : (
-              <path d="M3 5h14M3 10h14M3 15h14" />
-            )}
-          </svg>
-        </button>
+        {/* Mobile */}
+        <div className="flex md:hidden items-center gap-2">
+          <LangToggle />
+          <button
+            onClick={() => setOpen(!open)}
+            className="p-2 text-[var(--muted)] cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+              {open ? <path d="M4 4l12 12M16 4L4 16" /> : <path d="M3 5h14M3 10h14M3 15h14" />}
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-[var(--border)] px-4 pb-3">
           {LINKS.map((l) => (

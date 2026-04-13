@@ -3,8 +3,10 @@
 import { useState, useMemo } from "react";
 import type { Incident } from "@/lib/types";
 import IncidentCard from "./incident-card";
+import { useI18n } from "@/lib/i18n";
 
 export default function IncidentFilters({ incidents }: { incidents: Incident[] }) {
+  const { t } = useI18n();
   const [search, setSearch] = useState("");
   const [operator, setOperator] = useState<string>("");
   const [severity, setSeverity] = useState<string>("");
@@ -32,31 +34,31 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
       <div className="flex flex-wrap gap-3 mb-6">
         <input
           type="text"
-          placeholder="Search incidents..."
+          placeholder={t("inc.search")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className={`${selClass} flex-1 min-w-[180px]`}
         />
         <select value={operator} onChange={(e) => setOperator(e.target.value)} className={selClass}>
-          <option value="">All Operators</option>
+          <option value="">{t("inc.allOperators")}</option>
           {operators.map((o) => <option key={o} value={o}>{o}</option>)}
         </select>
         <select value={severity} onChange={(e) => setSeverity(e.target.value)} className={selClass}>
-          <option value="">All Severity</option>
+          <option value="">{t("inc.allSeverity")}</option>
           {["S0", "S1", "S2", "S3", "S4"].map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
         <select value={category} onChange={(e) => setCategory(e.target.value)} className={selClass}>
-          <option value="">All Categories</option>
+          <option value="">{t("inc.allCategories")}</option>
           {["A", "B", "C", "D", "E", "F"].map((c) => <option key={c} value={c}>{c}</option>)}
         </select>
         <select value={year} onChange={(e) => setYear(e.target.value)} className={selClass}>
-          <option value="">All Years</option>
+          <option value="">{t("inc.allYears")}</option>
           {years.map((y) => <option key={y} value={y}>{y}</option>)}
         </select>
       </div>
 
       <p className="text-sm text-[var(--muted)] mb-4">
-        {filtered.length} incident{filtered.length !== 1 ? "s" : ""} found
+        {filtered.length} {t("inc.found")}
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -67,7 +69,7 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
 
       {filtered.length === 0 && (
         <p className="text-center text-[var(--muted)] py-12">
-          No incidents match the current filters.
+          {t("inc.noMatch")}
         </p>
       )}
     </div>

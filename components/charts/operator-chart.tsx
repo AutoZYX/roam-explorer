@@ -1,6 +1,7 @@
 "use client";
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { useI18n } from "@/lib/i18n";
 
 const COLORS: Record<string, string> = {
   Waymo: "#4285F4",
@@ -11,6 +12,7 @@ const COLORS: Record<string, string> = {
 };
 
 export default function OperatorChart({ data }: { data: Record<string, number> }) {
+  const { t } = useI18n();
   const chartData = Object.entries(data)
     .sort(([, a], [, b]) => b - a)
     .map(([k, v]) => ({ operator: k, count: v, fill: COLORS[k] || "#6b6960" }));
@@ -18,7 +20,7 @@ export default function OperatorChart({ data }: { data: Record<string, number> }
   return (
     <div className="rounded-xl bg-[var(--card-bg)] border border-[var(--border)] p-5 shadow-[var(--card-shadow)]">
       <h3 className="text-sm font-semibold text-[var(--text)] mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
-        Incidents by Operator
+        {t("chart.operator")}
       </h3>
       <ResponsiveContainer width="100%" height={220}>
         <BarChart data={chartData} layout="vertical">

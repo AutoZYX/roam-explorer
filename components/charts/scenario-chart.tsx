@@ -2,8 +2,10 @@
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
 import { CATEGORY_COLORS, TAXONOMY } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 
 export default function ScenarioChart({ data }: { data: Record<string, number> }) {
+  const { t } = useI18n();
   const chartData = TAXONOMY.map((cat) => ({
     code: cat.code,
     name: cat.name_en,
@@ -14,7 +16,7 @@ export default function ScenarioChart({ data }: { data: Record<string, number> }
   return (
     <div className="rounded-xl bg-[var(--card-bg)] border border-[var(--border)] p-5 shadow-[var(--card-shadow)]">
       <h3 className="text-sm font-semibold text-[var(--text)] mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
-        Incidents by Scenario Category
+        {t("chart.scenario")}
       </h3>
       <ResponsiveContainer width="100%" height={220}>
         <BarChart data={chartData}>
