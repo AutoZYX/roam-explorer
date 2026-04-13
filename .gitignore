@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ROAM incident data (fetched at build time)
+/data/incidents/
+
+# Vercel
+.vercel
