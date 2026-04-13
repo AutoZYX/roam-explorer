@@ -12,11 +12,36 @@ export default function IncidentDetailContent({
 }: {
   incident: Incident;
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const zh = lang === "zh";
 
   const section = "mb-6";
   const sectionTitle =
     "text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-2";
+
+  const desc = zh && incident.description_cn
+    ? incident.description_cn.trim()
+    : incident.description.trim();
+
+  const rootCategory = zh && incident.root_cause?.category_cn
+    ? incident.root_cause.category_cn
+    : incident.root_cause?.category;
+
+  const rootDesc = zh && incident.root_cause?.description_cn
+    ? incident.root_cause.description_cn
+    : incident.root_cause?.description;
+
+  const systemicList = zh && incident.systemic_issues_cn?.length
+    ? incident.systemic_issues_cn
+    : incident.systemic_issues;
+
+  const regAction = zh && incident.regulatory_action_cn
+    ? incident.regulatory_action_cn.trim()
+    : incident.regulatory_action?.trim();
+
+  const resMethod = zh && incident.emergency_response?.resolution_method_cn
+    ? incident.emergency_response.resolution_method_cn
+    : incident.emergency_response?.resolution_method;
 
   return (
     <div>
@@ -72,9 +97,7 @@ export default function IncidentDetailContent({
         {/* Description */}
         <div className={section}>
           <h3 className={sectionTitle}>{t("detail.description")}</h3>
-          <p className="text-sm leading-relaxed whitespace-pre-line">
-            {incident.description.trim()}
-          </p>
+          <p className="text-sm leading-relaxed whitespace-pre-line">{desc}</p>
         </div>
 
         {/* Impact */}
@@ -85,17 +108,13 @@ export default function IncidentDetailContent({
               {incident.impact.vehicles_affected != null && (
                 <div className="rounded-lg bg-[var(--badge-bg)] p-3">
                   <p className="text-xs text-[var(--muted)]">{t("detail.vehicles")}</p>
-                  <p className="font-semibold">
-                    {incident.impact.vehicles_affected}
-                  </p>
+                  <p className="font-semibold">{incident.impact.vehicles_affected}</p>
                 </div>
               )}
               {incident.impact.duration_minutes != null && (
                 <div className="rounded-lg bg-[var(--badge-bg)] p-3">
                   <p className="text-xs text-[var(--muted)]">{t("detail.duration")}</p>
-                  <p className="font-semibold">
-                    {incident.impact.duration_minutes} {t("common.min")}
-                  </p>
+                  <p className="font-semibold">{incident.impact.duration_minutes} {t("common.min")}</p>
                 </div>
               )}
               {incident.impact.injuries != null && (
@@ -149,10 +168,10 @@ export default function IncidentDetailContent({
                 </div>
               )}
             </div>
-            {incident.emergency_response.resolution_method && (
+            {resMethod && (
               <p className="text-sm mt-2">
                 <span className="text-[var(--muted)]">{t("detail.resolution")}: </span>
-                {incident.emergency_response.resolution_method}
+                {resMethod}
               </p>
             )}
           </div>
@@ -162,10 +181,8 @@ export default function IncidentDetailContent({
         {incident.root_cause && (
           <div className={section}>
             <h3 className={sectionTitle}>{t("detail.rootCause")}</h3>
-            <p className="text-sm font-medium">{incident.root_cause.category}</p>
-            <p className="text-sm text-[var(--muted)] mt-1">
-              {incident.root_cause.description}
-            </p>
+            <p className="text-sm font-medium">{rootCategory}</p>
+            <p className="text-sm text-[var(--muted)] mt-1">{rootDesc}</p>
             <p className="text-xs mt-1">
               {incident.root_cause.confirmed
                 ? `\u2705 ${t("detail.confirmed")}`
@@ -175,11 +192,11 @@ export default function IncidentDetailContent({
         )}
 
         {/* Systemic Issues */}
-        {incident.systemic_issues && incident.systemic_issues.length > 0 && (
+        {systemicList && systemicList.length > 0 && (
           <div className={section}>
             <h3 className={sectionTitle}>{t("detail.systemic")}</h3>
             <ul className="list-disc list-inside text-sm space-y-1 text-[var(--muted)]">
-              {incident.systemic_issues.map((issue, i) => (
+              {systemicList.map((issue, i) => (
                 <li key={i}>{issue}</li>
               ))}
             </ul>
@@ -187,12 +204,10 @@ export default function IncidentDetailContent({
         )}
 
         {/* Regulatory Action */}
-        {incident.regulatory_action && (
+        {regAction && (
           <div className={section}>
             <h3 className={sectionTitle}>{t("detail.regulatory")}</h3>
-            <p className="text-sm leading-relaxed whitespace-pre-line">
-              {incident.regulatory_action.trim()}
-            </p>
+            <p className="text-sm leading-relaxed whitespace-pre-line">{regAction}</p>
           </div>
         )}
 
@@ -219,8 +234,8 @@ export default function IncidentDetailContent({
 
         {/* Metadata */}
         <div className="pt-4 border-t border-[var(--border)] text-xs text-[var(--muted)] flex flex-wrap gap-4">
-          {incident.contributor && <span>Contributor: {incident.contributor}</span>}
-          {incident.last_updated && <span>Updated: {incident.last_updated}</span>}
+          {incident.contributor && <span>{zh ? "贡献者" : "Contributor"}: {incident.contributor}</span>}
+          {incident.last_updated && <span>{zh ? "更新时间" : "Updated"}: {incident.last_updated}</span>}
         </div>
       </div>
     </div>

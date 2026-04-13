@@ -1,14 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import type { Incident } from "@/lib/types";
+import { useI18n } from "@/lib/i18n";
 import SeverityBadge from "./severity-badge";
 import UrgencyBadge from "./urgency-badge";
 import ScenarioTag from "./scenario-tag";
 
 export default function IncidentCard({ incident }: { incident: Incident }) {
-  const desc =
-    incident.description.length > 140
-      ? incident.description.substring(0, 140).trim() + "..."
+  const { lang } = useI18n();
+  const rawDesc =
+    lang === "zh" && incident.description_cn
+      ? incident.description_cn
       : incident.description;
+  const desc =
+    rawDesc.length > 140 ? rawDesc.substring(0, 140).trim() + "..." : rawDesc;
 
   return (
     <Link

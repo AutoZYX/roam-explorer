@@ -27,11 +27,14 @@ export interface EmergencyResponse {
   remote_intervention?: string;
   on_site_response?: string;
   resolution_method?: string;
+  resolution_method_cn?: string;
 }
 
 export interface RootCause {
   category: string;
+  category_cn?: string;
   description: string;
+  description_cn?: string;
   confirmed: boolean;
 }
 
@@ -51,11 +54,14 @@ export interface Incident {
   severity: Severity;
   urgency?: Urgency;
   description: string;
+  description_cn?: string;
   impact?: Impact;
   emergency_response?: EmergencyResponse;
   root_cause?: RootCause;
   systemic_issues?: string[];
+  systemic_issues_cn?: string[];
   regulatory_action?: string;
+  regulatory_action_cn?: string;
   sources?: Source[];
   contributor?: string;
   last_updated?: string;
