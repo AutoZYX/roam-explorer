@@ -6,18 +6,21 @@ import IncidentCard from "./incident-card";
 import { useI18n } from "@/lib/i18n";
 
 export default function IncidentFilters({ incidents }: { incidents: Incident[] }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [search, setSearch] = useState("");
   const [operator, setOperator] = useState<string>("");
   const [severity, setSeverity] = useState<string>("");
   const [category, setCategory] = useState<string>("");
   const [year, setYear] = useState<string>("");
+  const [tier, setTier] = useState<string>("1"); // default: show only curated
 
   const operators = useMemo(() => [...new Set(incidents.map((i) => i.operator))].sort(), [incidents]);
   const years = useMemo(() => [...new Set(incidents.map((i) => i.date.substring(0, 4)))].sort(), [incidents]);
 
   const filtered = useMemo(() => {
     return incidents.filter((inc) => {
+      if (tier === "1" && inc.tier !== 1) return false;
+      if (tier === "2" && inc.tier !== 2) return false;
       if (search && !inc.description.toLowerCase().includes(search.toLowerCase()) && !inc.id.toLowerCase().includes(search.toLowerCase())) return false;
       if (operator && inc.operator !== operator) return false;
       if (severity && inc.severity !== severity) return false;
@@ -25,7 +28,7 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
       if (year && !inc.date.startsWith(year)) return false;
       return true;
     });
-  }, [incidents, search, operator, severity, category, year]);
+  }, [incidents, search, operator, severity, category, year, tier]);
 
   const selClass = "rounded-lg border border-[var(--border)] bg-[var(--card-bg)] px-3 py-1.5 text-sm text-[var(--text)] focus:outline-none focus:ring-1 focus:ring-[var(--accent)]";
 
@@ -54,6 +57,11 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
         <select value={year} onChange={(e) => setYear(e.target.value)} className={selClass}>
           <option value="">{t("inc.allYears")}</option>
           {years.map((y) => <option key={y} value={y}>{y}</option>)}
+        </select>
+        <select value={tier} onChange={(e) => setTier(e.target.value)} className={selClass}>
+          <option value="1">{lang === "zh" ? "精选案例（Tier 1）" : "Curated (Tier 1)"}</option>
+          <option value="2">{lang === "zh" ? "DMV 报告（Tier 2）" : "DMV Reports (Tier 2)"}</option>
+          <option value="">{lang === "zh" ? "全部层级" : "All Tiers"}</option>
         </select>
       </div>
 

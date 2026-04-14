@@ -19,6 +19,10 @@ export function getAllIncidents(): Incident[] {
     for (const file of files) {
       const content = fs.readFileSync(path.join(yearDir, file), "utf-8");
       const incident = yaml.load(content) as Incident;
+      // Default tier for legacy records without an explicit tier
+      if (!incident.tier) {
+        incident.tier = incident.id.startsWith("ROAM-DMV-") ? 2 : 1;
+      }
       incidents.push(incident);
     }
   }

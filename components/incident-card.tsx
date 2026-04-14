@@ -22,7 +22,19 @@ export default function IncidentCard({ incident }: { incident: Incident }) {
       className="block rounded-xl bg-[var(--card-bg)] border border-[var(--border)] p-5 shadow-[var(--card-shadow)] hover:border-[var(--accent)] transition-colors no-underline"
     >
       <div className="flex items-start justify-between gap-2 mb-2">
-        <span className="text-xs font-mono text-[var(--muted)]">{incident.id}</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-mono text-[var(--muted)]">{incident.id}</span>
+          {incident.tier === 2 && (
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 font-medium">
+              {lang === "zh" ? "DMV 自动导入" : "DMV auto"}
+            </span>
+          )}
+          {incident.tier === 1 && (
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--accent)]/10 text-[var(--accent)] font-medium">
+              {lang === "zh" ? "精选" : "Curated"}
+            </span>
+          )}
+        </div>
         <span className="text-xs text-[var(--muted)]">{incident.date}</span>
       </div>
       <p className="font-medium text-sm text-[var(--text)] mb-2">

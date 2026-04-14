@@ -43,8 +43,11 @@ export interface Source {
   title: string;
 }
 
+export type Tier = 1 | 2 | 3;
+
 export interface Incident {
   id: string;
+  tier?: Tier;
   date: string;
   time?: string;
   operator: string;
