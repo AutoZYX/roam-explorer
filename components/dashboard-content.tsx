@@ -17,7 +17,7 @@ export default function DashboardContent({
   stats: DashboardStats;
   recent: Incident[];
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   return (
     <div>
@@ -25,6 +25,31 @@ export default function DashboardContent({
         <h1 className="text-3xl mb-2">{t("dash.title")}</h1>
         <p className="text-[var(--muted)]">{t("dash.desc")}</p>
       </div>
+
+      {/* Ask ROAM hero CTA */}
+      <Link
+        href="/ask"
+        className="block rounded-xl border-2 border-[var(--accent)] bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent)]/5 p-5 mb-8 hover:from-[var(--accent)]/15 hover:to-[var(--accent)]/10 transition-all no-underline group"
+      >
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">✨</span>
+            <div>
+              <p className="font-semibold text-[var(--text)] mb-1">
+                {lang === "zh" ? "试试 Ask ROAM — AI 智能问答" : "Try Ask ROAM — AI Assistant"}
+              </p>
+              <p className="text-sm text-[var(--muted)]">
+                {lang === "zh"
+                  ? "用自然语言查询 567 条事件库、27 个场景分类、参考架构与 KPI。中英文均可。"
+                  : "Query 567 incidents, 27 scenarios, architecture & KPIs in plain English or Chinese."}
+              </p>
+            </div>
+          </div>
+          <span className="text-[var(--accent)] font-medium text-sm whitespace-nowrap group-hover:translate-x-1 transition-transform">
+            {lang === "zh" ? "开始提问 →" : "Start asking →"}
+          </span>
+        </div>
+      </Link>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <StatCard label={t("dash.totalIncidents")} value={stats.totalIncidents} />

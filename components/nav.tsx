@@ -13,9 +13,12 @@ export default function Nav() {
   const LINKS = [
     { href: "/", label: t("nav.dashboard") },
     { href: "/incidents", label: t("nav.incidents") },
+    { href: "/map", label: t("nav.map") },
+    { href: "/operators", label: t("nav.operators") },
     { href: "/taxonomy", label: t("nav.taxonomy") },
     { href: "/architecture", label: t("nav.architecture") },
     { href: "/kpis", label: t("nav.kpis") },
+    { href: "/about", label: t("nav.about") },
     { href: "/ask", label: t("nav.ask") },
   ];
 
@@ -31,19 +34,41 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
-          {LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`px-3 py-1.5 rounded-md text-sm transition-colors no-underline ${
-                pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href))
-                  ? "bg-[var(--accent)]/10 text-[var(--accent)] font-medium"
-                  : "text-[var(--muted)] hover:text-[var(--text)]"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
+          {LINKS.map((l) => {
+            const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
+            const isAsk = l.href === "/ask";
+
+            if (isAsk) {
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className={`ml-1 px-3 py-1.5 rounded-md text-sm font-medium transition-all no-underline inline-flex items-center gap-1 ${
+                    isActive
+                      ? "bg-[var(--accent)] text-white shadow-sm"
+                      : "bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30 hover:bg-[var(--accent)] hover:text-white"
+                  }`}
+                >
+                  <span aria-hidden>✨</span>
+                  {l.label}
+                </Link>
+              );
+            }
+
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`px-3 py-1.5 rounded-md text-sm transition-colors no-underline ${
+                  isActive
+                    ? "bg-[var(--accent)]/10 text-[var(--accent)] font-medium"
+                    : "text-[var(--muted)] hover:text-[var(--text)]"
+                }`}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
           <LangToggle />
           <a
             href="https://github.com/AutoZYX/ROAM"

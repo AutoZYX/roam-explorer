@@ -12,6 +12,9 @@ const translations = {
   "nav.architecture": { en: "Architecture", zh: "参考架构" },
   "nav.kpis": { en: "KPIs", zh: "评估基准" },
   "nav.ask": { en: "Ask ROAM", zh: "智能问答" },
+  "nav.about": { en: "About", zh: "关于" },
+  "nav.operators": { en: "Operators", zh: "运营商" },
+  "nav.map": { en: "Map", zh: "地图" },
 
   // Dashboard
   "dash.title": { en: "ROAM Explorer", zh: "ROAM 交互式探索" },
