@@ -13,6 +13,7 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
   const [category, setCategory] = useState<string>("");
   const [year, setYear] = useState<string>("");
   const [tier, setTier] = useState<string>("1"); // default: show only curated
+  const [level, setLevel] = useState<string>("");
 
   const operators = useMemo(() => [...new Set(incidents.map((i) => i.operator))].sort(), [incidents]);
   const years = useMemo(() => [...new Set(incidents.map((i) => i.date.substring(0, 4)))].sort(), [incidents]);
@@ -26,9 +27,10 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
       if (severity && inc.severity !== severity) return false;
       if (category && inc.scenario.primary.charAt(0) !== category) return false;
       if (year && !inc.date.startsWith(year)) return false;
+      if (level && inc.driving_automation_level !== level) return false;
       return true;
     });
-  }, [incidents, search, operator, severity, category, year, tier]);
+  }, [incidents, search, operator, severity, category, year, tier, level]);
 
   const selClass = "rounded-lg border border-[var(--border)] bg-[var(--card-bg)] px-3 py-1.5 text-sm text-[var(--text)] focus:outline-none focus:ring-1 focus:ring-[var(--accent)]";
 
@@ -62,6 +64,12 @@ export default function IncidentFilters({ incidents }: { incidents: Incident[] }
           <option value="1">{lang === "zh" ? "精选案例（Tier 1）" : "Curated (Tier 1)"}</option>
           <option value="2">{lang === "zh" ? "DMV 报告（Tier 2）" : "DMV Reports (Tier 2)"}</option>
           <option value="">{lang === "zh" ? "全部层级" : "All Tiers"}</option>
+        </select>
+        <select value={level} onChange={(e) => setLevel(e.target.value)} className={selClass}>
+          <option value="">{lang === "zh" ? "全部自动化级别" : "All Levels"}</option>
+          <option value="L2">L2</option>
+          <option value="L3">L3</option>
+          <option value="L4">L4</option>
         </select>
       </div>
 

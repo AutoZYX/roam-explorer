@@ -6,6 +6,7 @@ import SeverityBadge from "./severity-badge";
 import UrgencyBadge from "./urgency-badge";
 import ScenarioTag from "./scenario-tag";
 import Link from "next/link";
+import { generateGbImmediateReport } from "@/lib/gb-report";
 
 export default function IncidentDetailContent({
   incident,
@@ -43,14 +44,36 @@ export default function IncidentDetailContent({
     ? incident.emergency_response.resolution_method_cn
     : incident.emergency_response?.resolution_method;
 
+  function downloadGbReport() {
+    const md = generateGbImmediateReport(incident);
+    const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${incident.id}-GB-T-immediate-report.md`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <div>
-      <Link
-        href="/incidents"
-        className="text-sm text-[var(--accent)] hover:underline no-underline mb-4 inline-block"
-      >
-        &larr; {t("inc.back")}
-      </Link>
+      <div className="flex items-center justify-between mb-4 gap-3 flex-wrap">
+        <Link
+          href="/incidents"
+          className="text-sm text-[var(--accent)] hover:underline no-underline"
+        >
+          &larr; {t("inc.back")}
+        </Link>
+        <button
+          onClick={downloadGbReport}
+          className="text-xs rounded-lg border border-[var(--border)] hover:border-[var(--accent)] bg-[var(--card-bg)] px-3 py-1.5 cursor-pointer transition-colors"
+          title={zh ? "下载符合 GB/T 附录 C 格式的立即报告模板" : "Download GB/T Appendix C immediate-report template"}
+        >
+          📄 {zh ? "导出 GB/T 立即报告" : "Export GB/T Report"}
+        </button>
+      </div>
 
       <div className="rounded-xl bg-[var(--card-bg)] border border-[var(--border)] p-6 shadow-[var(--card-shadow)]">
         {/* Header */}

@@ -5,8 +5,9 @@ import { useI18n } from "@/lib/i18n";
 import TaxonomyContent from "./taxonomy-content";
 import ArchitectureContent from "./architecture-content";
 import KPIsContent from "./kpis-content";
+import StandardsContent from "./standards-content";
 
-type Tab = "taxonomy" | "architecture" | "kpis";
+type Tab = "taxonomy" | "architecture" | "kpis" | "standards";
 
 export default function FrameworkContent({
   counts,
@@ -19,7 +20,7 @@ export default function FrameworkContent({
   // Sync with URL hash for deep linking
   useEffect(() => {
     const hash = window.location.hash.slice(1) as Tab;
-    if (hash === "taxonomy" || hash === "architecture" || hash === "kpis") {
+    if (hash === "taxonomy" || hash === "architecture" || hash === "kpis" || hash === "standards") {
       setTab(hash);
     }
   }, []);
@@ -29,10 +30,11 @@ export default function FrameworkContent({
     window.history.replaceState(null, "", `#${next}`);
   };
 
-  const tabs: { key: Tab; labelKey: "fw.tab.taxonomy" | "fw.tab.architecture" | "fw.tab.kpis" }[] = [
+  const tabs: { key: Tab; labelKey: "fw.tab.taxonomy" | "fw.tab.architecture" | "fw.tab.kpis" | "fw.tab.standards" }[] = [
     { key: "taxonomy", labelKey: "fw.tab.taxonomy" },
     { key: "architecture", labelKey: "fw.tab.architecture" },
     { key: "kpis", labelKey: "fw.tab.kpis" },
+    { key: "standards", labelKey: "fw.tab.standards" },
   ];
 
   return (
@@ -61,6 +63,7 @@ export default function FrameworkContent({
       {tab === "taxonomy" && <TaxonomyContent counts={counts} showHeader={false} />}
       {tab === "architecture" && <ArchitectureContent showHeader={false} />}
       {tab === "kpis" && <KPIsContent showHeader={false} />}
+      {tab === "standards" && <StandardsContent showHeader={false} />}
     </div>
   );
 }

@@ -25,6 +25,7 @@ const translations = {
   "fw.tab.taxonomy": { en: "Taxonomy", zh: "场景分类" },
   "fw.tab.architecture": { en: "Architecture", zh: "参考架构" },
   "fw.tab.kpis": { en: "KPIs", zh: "评估基准" },
+  "fw.tab.standards": { en: "Standards Alignment", zh: "标准对齐" },
 
   // Dashboard
   "dash.title": { en: "ROAM Explorer", zh: "ROAM 交互式探索" },
