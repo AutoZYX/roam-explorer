@@ -15,6 +15,7 @@ const translations = {
   "nav.about": { en: "About", zh: "关于" },
   "nav.operators": { en: "Operators", zh: "运营商" },
   "nav.map": { en: "Map", zh: "地图" },
+  "nav.reports": { en: "Reports", zh: "月报" },
 
   // Dashboard
   "dash.title": { en: "ROAM Explorer", zh: "ROAM 交互式探索" },

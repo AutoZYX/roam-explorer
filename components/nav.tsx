@@ -18,6 +18,7 @@ export default function Nav() {
     { href: "/taxonomy", label: t("nav.taxonomy") },
     { href: "/architecture", label: t("nav.architecture") },
     { href: "/kpis", label: t("nav.kpis") },
+    { href: "/reports", label: t("nav.reports") },
     { href: "/about", label: t("nav.about") },
     { href: "/ask", label: t("nav.ask") },
   ];
