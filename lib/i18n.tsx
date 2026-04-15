@@ -16,6 +16,15 @@ const translations = {
   "nav.operators": { en: "Operators", zh: "运营商" },
   "nav.map": { en: "Map", zh: "地图" },
   "nav.reports": { en: "Reports", zh: "月报" },
+  "nav.framework": { en: "Framework", zh: "理论框架" },
+  "fw.title": { en: "ROAM Framework", zh: "ROAM 理论框架" },
+  "fw.desc": {
+    en: "The theoretical foundation: scenario taxonomy, three-layer reference architecture, and 8 KPIs for evaluating robotaxi remote operations platforms.",
+    zh: "ROAM 的理论基础：场景分类体系、三层参考架构、8 个评估 KPI。",
+  },
+  "fw.tab.taxonomy": { en: "Taxonomy", zh: "场景分类" },
+  "fw.tab.architecture": { en: "Architecture", zh: "参考架构" },
+  "fw.tab.kpis": { en: "KPIs", zh: "评估基准" },
 
   // Dashboard
   "dash.title": { en: "ROAM Explorer", zh: "ROAM 交互式探索" },

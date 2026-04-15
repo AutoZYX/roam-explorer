@@ -13,11 +13,8 @@ export default function Nav() {
   const LINKS = [
     { href: "/", label: t("nav.dashboard") },
     { href: "/incidents", label: t("nav.incidents") },
-    { href: "/map", label: t("nav.map") },
     { href: "/operators", label: t("nav.operators") },
-    { href: "/taxonomy", label: t("nav.taxonomy") },
-    { href: "/architecture", label: t("nav.architecture") },
-    { href: "/kpis", label: t("nav.kpis") },
+    { href: "/framework", label: t("nav.framework") },
     { href: "/reports", label: t("nav.reports") },
     { href: "/about", label: t("nav.about") },
     { href: "/ask", label: t("nav.ask") },
@@ -25,7 +22,7 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-2 font-semibold text-lg no-underline text-[var(--text)]">
           <span className="text-[var(--accent)] font-bold text-xl" style={{ fontFamily: "Playfair Display, serif" }}>
             ROAM
@@ -44,7 +41,7 @@ export default function Nav() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className={`ml-1 px-3 py-1.5 rounded-md text-sm font-medium transition-all no-underline inline-flex items-center gap-1 ${
+                  className={`ml-1 px-3 py-1.5 rounded-md text-sm font-medium transition-all no-underline inline-flex items-center gap-1 whitespace-nowrap ${
                     isActive
                       ? "bg-[var(--accent)] text-white shadow-sm"
                       : "bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30 hover:bg-[var(--accent)] hover:text-white"

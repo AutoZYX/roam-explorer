@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useI18n } from "@/lib/i18n";
 import type { Incident, DashboardStats } from "@/lib/types";
 import StatCard from "./stat-card";
@@ -10,12 +11,23 @@ import OperatorChart from "./charts/operator-chart";
 import ScenarioChart from "./charts/scenario-chart";
 import Link from "next/link";
 
+const IncidentMap = dynamic(() => import("./incident-map"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[400px] rounded-xl border border-[var(--border)] bg-[var(--card-bg)] flex items-center justify-center">
+      <p className="text-[var(--muted)] text-sm">Loading map...</p>
+    </div>
+  ),
+});
+
 export default function DashboardContent({
   stats,
   recent,
+  allIncidents,
 }: {
   stats: DashboardStats;
   recent: Incident[];
+  allIncidents: Incident[];
 }) {
   const { t, lang } = useI18n();
 
@@ -63,6 +75,19 @@ export default function DashboardContent({
         <TimelineChart data={stats.byYear} />
         <OperatorChart data={stats.byOperator} />
         <ScenarioChart data={stats.byCategory} />
+      </div>
+
+      {/* Map section */}
+      <div className="mb-10">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl">{lang === "zh" ? "事件地图" : "Incident Map"}</h2>
+          <Link href="/map" className="text-sm text-[var(--accent)] hover:underline no-underline">
+            {lang === "zh" ? "全屏地图 →" : "Full map →"}
+          </Link>
+        </div>
+        <div className="h-[400px] rounded-xl border border-[var(--border)] overflow-hidden">
+          <IncidentMap incidents={allIncidents} compact />
+        </div>
       </div>
 
       <div className="flex items-center justify-between mb-4">

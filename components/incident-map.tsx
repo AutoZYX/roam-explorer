@@ -19,7 +19,7 @@ interface ClusterBubble {
   topIncidents: Incident[];
 }
 
-export default function IncidentMap({ incidents }: { incidents: Incident[] }) {
+export default function IncidentMap({ incidents, compact = false }: { incidents: Incident[]; compact?: boolean }) {
   const { lang } = useI18n();
   const zh = lang === "zh";
 
@@ -67,6 +67,41 @@ export default function IncidentMap({ incidents }: { incidents: Incident[] }) {
   };
 
   const radius = (count: number) => Math.min(35, Math.max(8, Math.sqrt(count) * 4));
+
+  if (compact) {
+    return (
+      <MapContainer
+        center={[37.5, -122]}
+        zoom={6}
+        style={{ height: "100%", width: "100%" }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {clusters.map((c) => (
+          <CircleMarker
+            key={c.city}
+            center={[c.lat, c.lng]}
+            radius={radius(c.count)}
+            pathOptions={{
+              fillColor: clusterColor(c),
+              color: clusterColor(c),
+              weight: 1,
+              fillOpacity: 0.5,
+            }}
+          >
+            <Popup>
+              <div className="text-xs">
+                <p className="font-semibold">{c.city.replace(", USA", "")}</p>
+                <p>{c.count} incidents</p>
+              </div>
+            </Popup>
+          </CircleMarker>
+        ))}
+      </MapContainer>
+    );
+  }
 
   return (
     <div>

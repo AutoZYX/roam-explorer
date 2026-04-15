@@ -6,15 +6,21 @@ import Link from "next/link";
 
 export default function TaxonomyContent({
   counts,
+  showHeader = true,
 }: {
   counts: Record<string, number>;
+  showHeader?: boolean;
 }) {
   const { t, lang } = useI18n();
 
   return (
     <div>
-      <h1 className="text-3xl mb-2">{t("tax.title")}</h1>
-      <p className="text-[var(--muted)] mb-8">{t("tax.desc")}</p>
+      {showHeader && (
+        <>
+          <h1 className="text-3xl mb-2">{t("tax.title")}</h1>
+          <p className="text-[var(--muted)] mb-8">{t("tax.desc")}</p>
+        </>
+      )}
 
       {/* Layer key */}
       <div className="flex flex-wrap gap-3 mb-8">
