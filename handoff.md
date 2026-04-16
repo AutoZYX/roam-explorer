@@ -26,8 +26,8 @@ autonomous-driving standards, regulations and consultations, bilingual (zh/en).
 Dynamic API route `/api/feed.xml` emits a valid RSS 2.0 feed of the latest 50
 records. Language toggle persists to `localStorage`.
 
-**Data: 57 seed YAML records** under `standards/{jurisdiction}/{year}/{id}.yaml`
-(12 international, 17 China, 12 US, 5 EU, 3 UK, 3 Japan). Every record carries
+**Data: 62 seed YAML records** under `standards/{jurisdiction}/{year}/{id}.yaml`
+(13 international, 24 China, 13 US, 6 EU, 3 UK, 3 Japan). Every record carries
 bilingual title, summary, jurisdiction, type, status, document number (where
 applicable), official URL, topics, automation levels, and a `last_updated`.
 
@@ -49,7 +49,7 @@ opens a `needs-review` PR if new candidates land. Timeout-protected (45 min).
 
 - ✅ Branch `ad-standards-tracker` exists (orphan from `main`).
 - ✅ 6 page routes, all statically generated at build time.
-- ✅ 57 YAML records (≥ 50 target).
+- ✅ 62 YAML records (≥ 50 target).
 - ✅ Python crawler + workflow in place; `python3 -m py_compile` clean.
 - ✅ `pnpm install && pnpm build` succeeds with 62 static pages prerendered + `/api/feed.xml` as dynamic.
 - ✅ RSS feed valid; bilingual i18n working; filters working.

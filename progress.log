@@ -1,0 +1,6 @@
+2026-04-16 · hour 0 · branch created (orphan) · explored roam-explorer structure & ROAM crawler template
+2026-04-16 · hour 1 · Next.js 16 + React 19 + Tailwind v4 scaffold · lib/types.ts, lib/data.ts, lib/i18n.tsx, lib/constants.ts, lib/sources.ts
+2026-04-16 · hour 2 · 6 pages wired (/, /standards, /standards/[id], /sources, /about, /subscribe) + /api/feed.xml · shared components (badges, cards, nav, footer, filters)
+2026-04-16 · hour 3 · 62 seed YAML records across 6 jurisdictions (13 INT, 24 CN, 13 US, 6 EU, 3 UK, 3 JP)
+2026-04-16 · hour 4 · Python crawler (crawler.py, sources.yaml, requirements.txt, README.md) + GitHub Actions daily-crawl workflow · pnpm build green (62 static pages)
+2026-04-16 · hour 5 · handoff.md + LICENSE + commit & push

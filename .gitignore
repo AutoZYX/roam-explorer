@@ -4,6 +4,7 @@ out
 dist
 .DS_Store
 *.log
+!progress.log
 .env
 .env.local
 .env.*.local
