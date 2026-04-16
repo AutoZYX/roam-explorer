@@ -1,0 +1,17 @@
+id: STD-UK-2024-001
+date: "2024-05-20"
+org: "UK Government"
+org_full: "Department for Transport & Centre for Connected and Autonomous Vehicles (CCAV)"
+jurisdiction: uk
+type: regulation
+status: published
+document_number: "Automated Vehicles Act 2024 (c. 10)"
+title_en: "Automated Vehicles Act 2024"
+title_cn: "英国《自动驾驶车辆法》(Automated Vehicles Act 2024)"
+url: https://www.legislation.gov.uk/ukpga/2024/10/enacted
+effective_date: "2024-05-20"
+automation_level: [L3, L4]
+topics: [type_approval, ads_performance, data_recording]
+summary_en: "Primary legislation creating the UK ADS authorisation regime, defining ‘user-in-charge’ vs ‘no-user-in-charge’ modes, operator licensing (NUICO) and statutory safety standard."
+summary_cn: "英国自动驾驶授权制度的基本法，定义“有责用户”与“无责用户”两种模式、运营商许可 (NUICO) 及法定安全标准。"
+last_updated: "2026-04-16"

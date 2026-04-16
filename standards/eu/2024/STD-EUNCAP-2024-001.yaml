@@ -1,0 +1,16 @@
+id: STD-EUNCAP-2024-001
+date: "2024-02-14"
+org: "Euro NCAP"
+org_full: "European New Car Assessment Programme"
+jurisdiction: eu
+type: standard
+status: published
+title_en: "Euro NCAP Assisted Driving 2024 test and assessment protocol"
+title_cn: "Euro NCAP 辅助驾驶 2024 年测试与评估规程"
+url: https://www.euroncap.com/en/vehicle-safety/the-rewards-explained/assisted-driving/
+effective_date: "2024-03-01"
+automation_level: [L2]
+topics: [testing, hmi, ads_performance]
+summary_en: "Updated Euro NCAP protocol for L2 assisted driving: driver engagement, driving competence, and safety backup — with revised grading rubric."
+summary_cn: "Euro NCAP 对 L2 辅助驾驶的更新规程：驾驶员参与、驾驶能力与安全兜底，并修订评分。"
+last_updated: "2026-04-16"

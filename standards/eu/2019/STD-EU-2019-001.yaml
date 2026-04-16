@@ -1,0 +1,18 @@
+id: STD-EU-2019-001
+date: "2019-11-27"
+org: "European Commission"
+org_full: "European Parliament & Council"
+jurisdiction: eu
+type: regulation
+status: published
+document_number: "Regulation (EU) 2019/2144"
+title_en: "Regulation (EU) 2019/2144 — General Safety Regulation (GSR)"
+title_cn: "欧盟 2019/2144 条例 · 通用安全法规 (GSR)"
+url: https://eur-lex.europa.eu/eli/reg/2019/2144/oj
+effective_date: "2022-07-06"
+automation_level: [L1, L2, L3]
+topics: [type_approval, ads_performance, data_recording, hmi]
+summary_en: "Mandates safety technologies for new vehicles sold in the EU: ISA, AEB, lane-keep assist, drowsiness detection, EDR, cybersecurity (per UN R155), and preparation for ADS."
+summary_cn: "要求欧盟销售新车强制配备：智能速度辅助 (ISA)、AEB、车道保持、疲劳监测、EDR、信息安全（对齐 UN R155），并为 ADS 做准备。"
+related_standards: ["UN R155", "UN R156", "UN R157"]
+last_updated: "2026-04-16"

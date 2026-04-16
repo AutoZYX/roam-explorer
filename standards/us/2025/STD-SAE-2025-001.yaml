@@ -1,0 +1,17 @@
+id: STD-SAE-2025-001
+date: "2025-05-21"
+org: SAE
+org_full: "SAE International"
+jurisdiction: us
+type: standard
+status: draft
+document_number: "J3206 (draft)"
+title_en: "SAE J3206 — Taxonomy and Definitions for Operational Design Domain (ODD) for Driving Automation"
+title_cn: "SAE J3206（草案）· 驾驶自动化运行设计域 (ODD) 术语与定义"
+url: https://www.sae.org/standards/
+automation_level: [L3, L4]
+topics: [operational_domain, ads_performance]
+summary_en: "Draft SAE standard providing a unified ODD taxonomy covering road topology, environmental, traffic and vehicle-state dimensions."
+summary_cn: "SAE 草案，提供统一 ODD 分类法，覆盖道路拓扑、环境、交通与车辆状态维度。"
+related_standards: ["ISO 34503", "SAE J3016"]
+last_updated: "2026-04-16"

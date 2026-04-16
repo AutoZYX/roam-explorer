@@ -1,0 +1,17 @@
+id: STD-UK-2025-001
+date: "2025-06-10"
+org: "UK CCAV"
+org_full: "Centre for Connected and Autonomous Vehicles (CCAV)"
+jurisdiction: uk
+type: consultation
+status: consultation
+title_en: "Statement of Safety Principles for self-driving vehicles — consultation"
+title_cn: "英国 CCAV · 自动驾驶车辆安全原则声明征求意见"
+url: https://www.gov.uk/government/consultations
+consultation_deadline: "2025-09-15"
+automation_level: [L3, L4]
+topics: [ads_performance, sotif, ethics, operational_domain]
+summary_en: "Consultation on the statutory Statement of Safety Principles mandated by the Automated Vehicles Act 2024. Sets the ‘at least as safe as a competent and careful human driver’ benchmark."
+summary_cn: "依据 2024 年自动驾驶车辆法制定的法定安全原则声明征求意见稿。确立“不低于审慎合格人类驾驶员”的安全基准。"
+related_standards: ["STD-UK-2024-001"]
+last_updated: "2026-04-16"

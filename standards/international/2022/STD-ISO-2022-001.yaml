@@ -1,0 +1,18 @@
+id: STD-ISO-2022-001
+date: "2022-06-15"
+org: ISO
+org_full: "International Organization for Standardization — TC 22/SC 32"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO 21448:2022"
+title_en: "ISO 21448:2022 — Road vehicles — Safety of the intended functionality (SOTIF)"
+title_cn: "ISO 21448:2022 — 道路车辆 · 预期功能安全 (SOTIF)"
+url: https://www.iso.org/standard/77490.html
+effective_date: "2022-06-15"
+automation_level: [L1, L2, L3, L4]
+topics: [sotif, functional_safety, ads_performance]
+summary_en: "Extends the coverage of ISO 26262 beyond E/E faults to hazards caused by performance limitations of the intended function, foreseeable misuse, and insufficient situational awareness — particularly relevant to ADAS / ADS."
+summary_cn: "在 ISO 26262 电子电气失效的基础上，覆盖因功能不足、可预见误用和传感/识别局限导致的安全风险，适用于 ADAS 与自动驾驶系统。"
+related_standards: ["ISO 26262", "ISO 34502"]
+last_updated: "2026-04-16"

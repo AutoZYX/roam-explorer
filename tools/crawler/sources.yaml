@@ -1,0 +1,181 @@
+# Machine-readable config for the AD Standards Tracker crawler.
+# 25 primary sources. The crawler scrapes listing / "news" pages only;
+# it does not attempt to download or redistribute the standard text itself.
+#
+# A source with `feed:` (RSS/Atom) is strongly preferred and handled first.
+# A source with `html:` uses BeautifulSoup CSS selectors.
+# A source with `skip_robots: true` should NEVER be set without explicit
+# permission from the issuing body.
+
+defaults:
+  user_agent: "AD-Standards-Tracker-Bot/1.0 (contact: zhangyuxin@jlu.edu.cn)"
+  timeout_seconds: 30
+  retry_count: 3
+  retry_backoff_seconds: 2
+  max_block_per_source_seconds: 1200  # single-source blocker cap (20 min)
+  polite_delay_seconds: 2
+
+sources:
+  # ---------------- International ----------------
+  - id: unece-wp29
+    name: UNECE WP.29 / GRVA
+    jurisdiction: international
+    html: https://unece.org/transport/road-transport/working-party-automatedautonomous-and-connected-vehicles-introduction
+    list_selector: "article, .field__item"
+    title_selector: "h2 a, h3 a"
+    date_selector: "time"
+    keywords: [ALKS, ADS, DCAS, DSSAD, R157, R155, R156, R171, automated, autonomous]
+
+  - id: iso-tc22-sc33
+    name: ISO TC22/SC33
+    jurisdiction: international
+    html: https://www.iso.org/committee/46706.html
+    list_selector: "tr.ng-scope, li.committee-item"
+    title_selector: "a"
+    keywords: [21448, 34502, 34503, 21434, 5083, 24089, 22737, 23150]
+
+  - id: iso-sae-21434
+    name: ISO/SAE 21434
+    jurisdiction: international
+    html: https://www.iso.org/standard/70918.html
+    keywords: [21434, cybersecurity]
+
+  # ---------------- China ----------------
+  - id: sac
+    name: SAC
+    jurisdiction: china
+    html: https://www.sac.gov.cn/
+    list_selector: ".list li"
+    keywords: [智能网联汽车, 自动驾驶, 征求意见, 型式认证, GB, 汽车信息安全]
+
+  - id: sac-tc114
+    name: SAC/TC114
+    jurisdiction: china
+    html: http://www.catarc.org.cn/
+    keywords: [智能网联, 自动驾驶, 标准, 征求意见]
+
+  - id: sac-tc114-sc34
+    name: SAC/TC114/SC34
+    jurisdiction: china
+    html: http://www.catarc.org.cn/
+    keywords: [智能网联汽车, SC34, 分技术委员会]
+
+  - id: miit
+    name: MIIT 装备一司
+    jurisdiction: china
+    html: https://www.miit.gov.cn/jgsj/zbys/qcgy/
+    list_selector: ".nav_listcon li"
+    title_selector: "a"
+    date_selector: ".date, span.time"
+    keywords: [智能网联汽车, 自动驾驶, 准入, 试点, OTA, 信息安全]
+
+  - id: samr
+    name: SAMR
+    jurisdiction: china
+    html: https://www.samr.gov.cn/
+    keywords: [智能网联, 召回, OTA, 自动驾驶]
+
+  - id: mot
+    name: 交通运输部
+    jurisdiction: china
+    html: https://www.mot.gov.cn/
+    keywords: [自动驾驶, 智能网联, 运输安全, 征求意见]
+
+  - id: catarc
+    name: CATARC 中汽研
+    jurisdiction: china
+    html: https://www.catarc.com/
+    keywords: [标准, 智能网联, 征求意见]
+
+  - id: caeri
+    name: CAERI 中国汽研
+    jurisdiction: china
+    html: https://www.caeri.com.cn/
+    keywords: [智能网联, i-VISTA, 测评]
+
+  - id: cmc
+    name: CMC 招商车研
+    jurisdiction: china
+    html: https://www.cmcresearch.com/
+    keywords: [智能网联, 自动驾驶]
+
+  - id: beijing-cape
+    name: 北京示范区
+    jurisdiction: china
+    html: https://www.bjcapedz.cn/
+    keywords: [自动驾驶, 示范区, 高级别, 政策先行区]
+
+  - id: shanghai-icv
+    name: 上海临港 / 嘉定示范区
+    jurisdiction: china
+    html: https://www.lgxc.gov.cn/
+    keywords: [智能网联, 自动驾驶, 示范区]
+
+  - id: shenzhen-icv
+    name: 深圳人大常委会
+    jurisdiction: china
+    html: http://www.szrd.gov.cn/
+    keywords: [智能网联汽车管理条例, 深圳, 自动驾驶]
+
+  # ---------------- US ----------------
+  - id: nhtsa
+    name: NHTSA
+    jurisdiction: us
+    html: https://www.nhtsa.gov/laws-regulations
+    keywords: [Standing General Order, AV, automated, ADAS, recall, Part 579]
+
+  - id: ca-dmv
+    name: California DMV AV
+    jurisdiction: us
+    html: https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/
+    keywords: [autonomous, testing, deployment, driverless]
+
+  - id: sae
+    name: SAE International Standards
+    jurisdiction: us
+    html: https://www.sae.org/standards/
+    keywords: [J3016, J3018, J3131, J3164, J3206, J3237, J3247, J4003]
+
+  - id: ul
+    name: UL 4600
+    jurisdiction: us
+    html: https://ulse.org/focus-areas/travel-safety/autonomous-vehicles/
+    keywords: [UL 4600, autonomous, safety case]
+
+  - id: ieee-sa
+    name: IEEE SA
+    jurisdiction: us
+    html: https://standards.ieee.org/
+    keywords: [2846, 2848, P3128, automated driving]
+
+  # ---------------- EU / UK ----------------
+  - id: ec-transport
+    name: EC DG MOVE
+    jurisdiction: eu
+    html: https://transport.ec.europa.eu/
+    keywords: [automated, connected, 2022/1426, 2019/2144, CCAM]
+
+  - id: euroncap
+    name: Euro NCAP
+    jurisdiction: eu
+    html: https://www.euroncap.com/en/for-engineers/publications/
+    keywords: [Assisted Driving, Automated, Vision 2030]
+
+  - id: uk-ccav
+    name: UK CCAV
+    jurisdiction: uk
+    html: https://www.gov.uk/government/organisations/centre-for-connected-and-autonomous-vehicles
+    keywords: [automated vehicles act, CAV, NUICO, self-driving]
+
+  # ---------------- Japan ----------------
+  - id: meti
+    name: METI
+    jurisdiction: japan
+    html: https://www.meti.go.jp/english/
+    keywords: [automated driving, RoAD to the L4, mobility]
+
+  - id: mlit
+    name: MLIT
+    jurisdiction: japan
+    html: https://www.mlit.go.jp/en/
+    keywords: [automated driving, Level 4, road transport act]

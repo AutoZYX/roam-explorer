@@ -1,0 +1,19 @@
+id: STD-UNECE-2021-001
+date: "2021-03-04"
+org: UNECE WP.29
+org_full: "UN Economic Commission for Europe — World Forum for Harmonization of Vehicle Regulations (WP.29)"
+jurisdiction: international
+type: regulation
+status: published
+document_number: "UN Regulation No. 157"
+title_en: "UN Regulation No. 157 — Uniform provisions concerning the approval of vehicles with regards to Automated Lane Keeping Systems (ALKS)"
+title_cn: "联合国第 157 号法规 — 自动车道保持系统 (ALKS) 车辆型式认证统一规定"
+url: https://unece.org/transport/documents/2021/03/standards/un-regulation-no-157-automated-lane-keeping-systems-alks
+effective_date: "2021-01-22"
+automation_level: [L3]
+topics: [type_approval, ads_performance, hmi, data_recording]
+summary_en: "First UN-level binding regulation for L3 ALKS on motorways. Specifies system boundaries, minimum risk manoeuvre, driver availability monitoring, DSSAD data recording and cyber/OTA prerequisites. Initial speed cap of 60 km/h raised to 130 km/h by 02 series amendment."
+summary_cn: "联合国首部针对 L3 自动车道保持系统的强制性法规，适用于机动车道。规定系统运行边界、最小风险策略、驾驶员准备度监测、DSSAD 数据记录要求，以及与信息安全、OTA 的衔接。初版限速 60 km/h，02 系列修订后提升至 130 km/h。"
+impact_note: "Reference text for L3 type approval in EU, Japan and Korea. China's GB 44495 family borrows the DSSAD concept."
+related_standards: ["UN R155", "UN R156", "ISO/SAE 21434", "ISO 22737"]
+last_updated: "2026-04-16"

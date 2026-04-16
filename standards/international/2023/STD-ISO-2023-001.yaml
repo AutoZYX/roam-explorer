@@ -1,0 +1,18 @@
+id: STD-ISO-2023-001
+date: "2023-02-06"
+org: ISO
+org_full: "International Organization for Standardization"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO 24089:2023"
+title_en: "ISO 24089:2023 — Road vehicles — Software update engineering"
+title_cn: "ISO 24089:2023 — 道路车辆 · 软件更新工程"
+url: https://www.iso.org/standard/77796.html
+effective_date: "2023-02-06"
+automation_level: [L1, L2, L3, L4]
+topics: [ota, cybersecurity]
+summary_en: "Engineering-process standard for vehicle and in-vehicle software updates across the OEM, supplier and infrastructure chain. Aligned with UN R156 SUMS."
+summary_cn: "针对整车与车载软件升级的工程过程标准，覆盖主机厂、供应商与基础设施全链条；与 UN R156 SUMS 要求对齐。"
+related_standards: ["UN R156", "ISO/SAE 21434"]
+last_updated: "2026-04-16"

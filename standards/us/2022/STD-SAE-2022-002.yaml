@@ -1,0 +1,17 @@
+id: STD-SAE-2022-002
+date: "2022-05-03"
+org: SAE
+org_full: "SAE International"
+jurisdiction: us
+type: standard
+status: published
+document_number: "J3131_202205"
+title_en: "SAE J3131_202205 — Definitions for Terms Related to Automated Driving Systems Reference Architecture"
+title_cn: "SAE J3131_202205 — 自动驾驶系统参考架构术语定义"
+url: https://www.sae.org/standards/content/j3131_202205/
+effective_date: "2022-05-03"
+automation_level: [L3, L4]
+topics: [ads_performance]
+summary_en: "Reference-architecture vocabulary for ADS: perception, localization, planning, control modules and interfaces. Useful for cross-supplier integration contracts."
+summary_cn: "ADS 参考架构词汇表：感知、定位、规划、控制模块及接口定义，便于跨供应商集成契约。"
+last_updated: "2026-04-16"

@@ -1,0 +1,17 @@
+id: STD-MOT-2025-001
+date: "2025-07-22"
+org: MOT
+org_full: "交通运输部"
+jurisdiction: china
+type: consultation
+status: consultation
+title_en: "MOT consultation on Safety Service Guidelines for Autonomous Driving in Transport Operations"
+title_cn: "交通运输部《自动驾驶汽车运输安全服务指南》征求意见"
+url: https://www.mot.gov.cn/
+consultation_deadline: "2025-08-31"
+automation_level: [L3, L4]
+topics: [testing, ads_performance, teleoperation, data_recording]
+summary_en: "Draft operational-safety guidelines for autonomous passenger and freight transport, including fleet safety officer duties, tele-operation workstation requirements, and incident reporting."
+summary_cn: "自动驾驶客运与货运运输安全服务指南草案，涵盖车队安全员职责、远程驾驶工位要求与事件报告。"
+related_standards: ["STD-SAC-2025-002"]
+last_updated: "2026-04-16"

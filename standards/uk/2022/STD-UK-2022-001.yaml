@@ -1,0 +1,17 @@
+id: STD-UK-2022-001
+date: "2022-01-26"
+org: "UK Law Commission"
+org_full: "Law Commission of England and Wales & Scottish Law Commission"
+jurisdiction: uk
+type: white_paper
+status: published
+title_en: "Automated Vehicles: joint report (HC 1068)"
+title_cn: "英国《自动驾驶车辆：联合报告》(HC 1068)"
+url: https://www.lawcom.gov.uk/project/automated-vehicles/
+effective_date: "2022-01-26"
+automation_level: [L3, L4]
+topics: [ads_performance, ethics, type_approval]
+summary_en: "Joint legal-reform report that became the intellectual basis for the Automated Vehicles Act 2024 — particularly the authorised self-driving entity (ASDE) concept."
+summary_cn: "英格兰与苏格兰法律委员会联合改革报告，构成 2024 年自动驾驶车辆法的思想基础，特别是授权自动驾驶实体 (ASDE) 概念。"
+related_standards: ["STD-UK-2024-001"]
+last_updated: "2026-04-16"

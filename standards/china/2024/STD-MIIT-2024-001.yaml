@@ -1,0 +1,17 @@
+id: STD-MIIT-2024-001
+date: "2024-06-04"
+org: MIIT
+org_full: "工业和信息化部"
+jurisdiction: china
+type: regulation
+status: published
+title_en: "First batch of L3/L4 access-and-road-operation pilot entrants (9 consortia)"
+title_cn: "智能网联汽车准入和上路通行试点 · 首批入选联合体（9 家）"
+url: https://www.miit.gov.cn/jgsj/zbys/qcgy/art/2024/art_xxxx.html
+effective_date: "2024-06-04"
+automation_level: [L3, L4]
+topics: [type_approval, testing]
+summary_en: "Nine OEM-operator consortia selected in the first batch of the national L3/L4 access-and-road-operation pilot, including BYD/Shenzhen, NIO/Beijing, Changan/Chongqing, SAIC/Shanghai."
+summary_cn: "国家智能网联汽车准入和上路通行试点首批入选 9 个联合体，含比亚迪/深圳、蔚来/北京、长安/重庆、上汽/上海等“主机厂 + 试点运营主体”组合。"
+related_standards: ["STD-MIIT-2023-001"]
+last_updated: "2026-04-16"

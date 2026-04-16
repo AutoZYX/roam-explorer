@@ -1,0 +1,16 @@
+id: STD-CADMV-2025-001
+date: "2025-07-30"
+org: "California DMV"
+org_full: "California Department of Motor Vehicles — Autonomous Vehicles Branch"
+jurisdiction: us
+type: regulation
+status: consultation
+title_en: "California DMV — Proposed amendments to heavy-duty Autonomous Vehicle testing and deployment regulations"
+title_cn: "加州 DMV · 重型自动驾驶车辆测试与部署条例修订（征求意见）"
+url: https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/
+consultation_deadline: "2025-09-29"
+automation_level: [L4]
+topics: [testing, type_approval]
+summary_en: "Proposed rulemaking extending California's AV permit regime to heavy-duty trucks (Class 7/8), introducing safety-case requirements and reporting obligations."
+summary_cn: "拟议规则将加州自动驾驶许可制度扩展至 7/8 类重型卡车，引入安全论证要求与报告义务。"
+last_updated: "2026-04-16"

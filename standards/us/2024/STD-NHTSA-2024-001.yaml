@@ -1,0 +1,16 @@
+id: STD-NHTSA-2024-001
+date: "2024-04-05"
+org: NHTSA
+org_full: "National Highway Traffic Safety Administration"
+jurisdiction: us
+type: regulation
+status: published
+title_en: "Standing General Order 2021-01 — Incident Reporting for ADS and L2 ADAS vehicles (amended 2024)"
+title_cn: "NHTSA 常设一般性命令 2021-01 · ADS 与 L2 ADAS 车辆事件报告要求（2024 年修订）"
+url: https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting
+effective_date: "2024-05-15"
+automation_level: [L2, L3, L4]
+topics: [recall, data_recording]
+summary_en: "Updated reporting requirements for ADS-equipped vehicles and SAE L2 ADAS vehicles involved in crashes. Clarifies 1-day / 10-day / monthly reporting tiers and data elements."
+summary_cn: "对搭载 ADS 及 SAE L2 ADAS 车辆涉及碰撞的报告要求进行修订，明确 1 日 / 10 日 / 月度报告层级及数据要素。"
+last_updated: "2026-04-16"

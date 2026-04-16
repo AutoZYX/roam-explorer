@@ -1,0 +1,18 @@
+id: STD-UNECE-2025-001
+date: "2025-09-22"
+org: UNECE WP.29
+org_full: "UN Economic Commission for Europe — GRVA"
+jurisdiction: international
+type: consultation
+status: consultation
+title_en: "GRVA Informal Working Group on ADS — Consolidated proposal for a new UN Regulation on Automated Driving Systems (L3/L4 multi-lane, urban)"
+title_cn: "GRVA 自动驾驶系统非正式工作组 · L3/L4 多车道及城市场景自动驾驶系统新法规合并提案"
+url: https://unece.org/transport/road-transport/working-party-automatedautonomous-and-connected-vehicles-introduction
+consultation_deadline: "2026-06-30"
+automation_level: [L3, L4]
+topics: [ads_performance, type_approval, operational_domain, data_recording]
+summary_en: "Informal working group text extending R157-style requirements to multi-lane operation and urban ODDs, with harmonised DSSAD data elements and human-machine interaction requirements for dynamic driving task transitions."
+summary_cn: "在 UN R157 基础上扩展至多车道与城市运行设计域的非正式工作组文本，统一 DSSAD 数据元素与动态驾驶任务移交的人机交互要求。"
+impact_note: "If adopted, provides the first global L4-urban type-approval pathway outside China's GB 44495 draft."
+related_standards: ["UN R157", "UN R171", "GB 44495 (draft)"]
+last_updated: "2026-04-16"

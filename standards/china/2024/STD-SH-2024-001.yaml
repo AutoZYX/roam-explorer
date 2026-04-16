@@ -1,0 +1,16 @@
+id: STD-SH-2024-001
+date: "2024-07-04"
+org: "Shanghai ICV"
+org_full: "上海市经济和信息化委员会"
+jurisdiction: china
+type: regulation
+status: published
+title_en: "Shanghai Innovative Measures on Supporting Pilot Launch of Intelligent Connected New Energy Vehicles"
+title_cn: "上海市智能网联新能源汽车示范应用创新支持政策"
+url: https://www.lgxc.gov.cn/
+effective_date: "2024-07-04"
+automation_level: [L3, L4]
+topics: [testing, operational_domain]
+summary_en: "Shanghai pilot policy expanding robotaxi demonstration zones to Lingang, Jiading and Pudong Airport, with first commercial-fare permits issued."
+summary_cn: "上海示范应用创新支持政策，将 Robotaxi 示范区域扩展至临港、嘉定与浦东机场，并发放首批商业化收费牌照。"
+last_updated: "2026-04-16"

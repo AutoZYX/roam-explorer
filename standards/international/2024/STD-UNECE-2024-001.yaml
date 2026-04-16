@@ -1,0 +1,18 @@
+id: STD-UNECE-2024-001
+date: "2024-03-08"
+org: UNECE WP.29
+org_full: "UN Economic Commission for Europe — GRVA"
+jurisdiction: international
+type: regulation
+status: published
+document_number: "UN Regulation No. 171"
+title_en: "UN Regulation No. 171 — Uniform provisions concerning the approval of vehicles with regard to Driver Control Assistance Systems (DCAS)"
+title_cn: "联合国第 171 号法规 — 驾驶控制辅助系统 (DCAS) 型式认证统一规定"
+url: https://unece.org/transport/documents/2024/03/standards/un-regulation-no-171-driver-control-assistance-systems
+effective_date: "2024-09-10"
+automation_level: [L2]
+topics: [ads_performance, hmi, type_approval]
+summary_en: "Introduces a global type-approval framework for driver control assistance (hands-on / hands-off L2) systems, consolidating requirements formerly spread across steering, speed and lane-keeping regulations."
+summary_cn: "为 L2 级驾驶控制辅助（手握 / 脱手）系统建立全球统一的型式认证框架，整合原分散在转向、速度与车道保持法规中的要求。"
+related_standards: ["UN R79", "UN R157"]
+last_updated: "2026-04-16"

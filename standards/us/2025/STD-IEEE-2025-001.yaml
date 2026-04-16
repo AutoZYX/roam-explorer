@@ -1,0 +1,18 @@
+id: STD-IEEE-2025-001
+date: "2025-06-05"
+org: IEEE
+org_full: "IEEE Standards Association"
+jurisdiction: us
+type: consultation
+status: draft
+document_number: "IEEE P3128 (draft)"
+title_en: "IEEE P3128 — Standard for Teleoperation for Road Vehicles"
+title_cn: "IEEE P3128 — 道路车辆远程驾驶标准（草案）"
+url: https://standards.ieee.org/ieee/3128/
+consultation_deadline: "2026-01-31"
+automation_level: [L3, L4]
+topics: [teleoperation, hmi, cybersecurity]
+summary_en: "Working-group draft for teleoperation of road vehicles: remote driver workstation, latency budgets, cybersecurity, failover to minimum risk manoeuvre."
+summary_cn: "道路车辆远程驾驶工作组草案：远程驾驶工位、时延预算、信息安全、最小风险策略回退。"
+related_standards: ["ISO/DIS 24956"]
+last_updated: "2026-04-16"

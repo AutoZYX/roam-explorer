@@ -1,0 +1,18 @@
+id: STD-UNECE-2021-002
+date: "2021-01-22"
+org: UNECE WP.29
+org_full: "UN Economic Commission for Europe — World Forum for Harmonization of Vehicle Regulations (WP.29)"
+jurisdiction: international
+type: regulation
+status: published
+document_number: "UN Regulation No. 155"
+title_en: "UN Regulation No. 155 — Uniform provisions concerning the approval of vehicles with regards to cyber security and cyber security management system"
+title_cn: "联合国第 155 号法规 — 网络安全与网络安全管理体系型式认证统一规定"
+url: https://unece.org/transport/documents/2021/03/standards/un-regulation-no-155-cyber-security-and-cyber-security
+effective_date: "2022-07-01"
+automation_level: [L1, L2, L3, L4]
+topics: [cybersecurity, type_approval]
+summary_en: "Establishes a Cyber Security Management System (CSMS) audit regime as a prerequisite for vehicle type approval and ongoing compliance. References risk identification, monitoring, response and supplier obligations across the vehicle lifecycle."
+summary_cn: "要求申报型式认证的整车企业建立并通过网络安全管理体系 (CSMS) 审核，覆盖全生命周期风险识别、监测、响应与供应商义务。"
+related_standards: ["ISO/SAE 21434", "UN R156"]
+last_updated: "2026-04-16"

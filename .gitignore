@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+.vercel
+__pycache__
+*.pyc
+.pytest_cache
+tools/crawler/raw/
+tools/crawler/.cache/

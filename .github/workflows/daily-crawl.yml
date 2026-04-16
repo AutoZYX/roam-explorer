@@ -1,0 +1,76 @@
+name: Daily Standards Crawl
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # 02:00 UTC daily
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: tools/crawler/requirements.txt
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r tools/crawler/requirements.txt
+
+      - name: Run crawler (all sources)
+        run: |
+          cd tools/crawler
+          python crawler.py --all
+        continue-on-error: true
+
+      - name: Check for new candidate files
+        id: check
+        run: |
+          cd tools/crawler
+          TODAY=$(date -u +%Y-%m-%d)
+          if [ -d "raw/$TODAY" ] && [ -n "$(ls -A raw/$TODAY 2>/dev/null)" ]; then
+            COUNT=$(ls raw/$TODAY | wc -l | tr -d ' ')
+            echo "has_new=true" >> $GITHUB_OUTPUT
+            echo "count=$COUNT" >> $GITHUB_OUTPUT
+            echo "date=$TODAY" >> $GITHUB_OUTPUT
+          else
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open PR with candidates
+        if: steps.check.outputs.has_new == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(crawler): candidates ${{ steps.check.outputs.date }}"
+          title: "🤖 Crawler candidates — ${{ steps.check.outputs.date }}"
+          body: |
+            Automated crawler output from the daily run on ${{ steps.check.outputs.date }}.
+
+            **Status:** `needs-review` — candidates require human verification before
+            promotion to YAML records under `standards/`.
+
+            Review checklist:
+            - [ ] URLs resolve and point to the listed title
+            - [ ] Not already present in `standards/`
+            - [ ] Classified (jurisdiction / type / status / topics)
+            - [ ] Bilingual title & summary drafted (no unreviewed AI text)
+            - [ ] Assigned `STD-{ORG}-{YYYY}-{NNN}` id
+          branch: crawler/${{ steps.check.outputs.date }}
+          base: main
+          labels: |
+            auto-crawled
+            needs-review
+          delete-branch: true

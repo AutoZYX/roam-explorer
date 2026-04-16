@@ -1,0 +1,18 @@
+id: STD-EU-2024-001
+date: "2024-08-08"
+org: "European Commission"
+org_full: "European Commission — DG GROW"
+jurisdiction: eu
+type: regulation
+status: published
+document_number: "Regulation (EU) 2022/1426 as amended 2024"
+title_en: "EU Implementing Regulation (EU) 2022/1426 — Uniform procedures and technical specifications for the type-approval of fully automated vehicles"
+title_cn: "欧盟 2022/1426 实施条例（2024 修订）· 全自动驾驶车辆型式认证统一程序与技术规范"
+url: https://eur-lex.europa.eu/eli/reg_impl/2022/1426/oj
+effective_date: "2022-09-07"
+automation_level: [L4]
+topics: [type_approval, ads_performance, sotif, cybersecurity, data_recording]
+summary_en: "EU-wide type-approval framework for fully automated vehicles, bridging UN R157 with the 2019/2144 General Safety Regulation."
+summary_cn: "欧盟层面全自动驾驶车辆型式认证框架，衔接 UN R157 与 2019/2144 通用安全法规。"
+related_standards: ["UN R157", "Regulation (EU) 2019/2144"]
+last_updated: "2026-04-16"

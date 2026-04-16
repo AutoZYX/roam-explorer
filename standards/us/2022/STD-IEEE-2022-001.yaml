@@ -1,0 +1,17 @@
+id: STD-IEEE-2022-001
+date: "2022-04-06"
+org: IEEE
+org_full: "IEEE Standards Association"
+jurisdiction: us
+type: standard
+status: published
+document_number: "IEEE 2846-2022"
+title_en: "IEEE 2846-2022 — Assumptions in Safety-Related Models for Automated Driving Systems"
+title_cn: "IEEE 2846-2022 — 自动驾驶系统安全相关模型的假设"
+url: https://standards.ieee.org/ieee/2846/10831/
+effective_date: "2022-04-06"
+automation_level: [L3, L4]
+topics: [functional_safety, ads_performance, sotif]
+summary_en: "Rules for formulating assumptions about reasonably foreseeable behaviors of other road users in ADS safety models. Introduces the ‘reasonably foreseeable’ envelope used in later assurance cases."
+summary_cn: "规定 ADS 安全模型中关于其他道路使用者“合理可预见行为”的假设建立规则，其“合理可预见”包络被后续安全论证广泛引用。"
+last_updated: "2026-04-16"

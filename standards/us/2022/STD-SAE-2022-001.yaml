@@ -1,0 +1,18 @@
+id: STD-SAE-2022-001
+date: "2022-12-14"
+org: SAE
+org_full: "SAE International"
+jurisdiction: us
+type: standard
+status: published
+document_number: "J3018_202212"
+title_en: "SAE J3018_202212 — Safety-Relevant Guidance for On-Road Testing of Prototype Automated Driving System (ADS)-Operated Vehicles"
+title_cn: "SAE J3018_202212 — 原型自动驾驶系统车辆道路测试安全指导"
+url: https://www.sae.org/standards/content/j3018_202212/
+effective_date: "2022-12-14"
+automation_level: [L3, L4]
+topics: [testing, ads_performance]
+summary_en: "Guidance on operational safety measures for on-road testing of prototype ADS vehicles: in-vehicle test driver selection, training, procedures, and fleet safety management."
+summary_cn: "原型 ADS 车辆道路测试的安全指导：测试驾驶员选拔、培训、程序与车队安全管理。"
+related_standards: ["SAE J3237"]
+last_updated: "2026-04-16"

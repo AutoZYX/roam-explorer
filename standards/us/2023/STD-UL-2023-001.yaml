@@ -1,0 +1,18 @@
+id: STD-UL-2023-001
+date: "2023-09-12"
+org: UL
+org_full: "UL Standards & Engagement"
+jurisdiction: us
+type: standard
+status: revised
+document_number: "ANSI/UL 4600"
+title_en: "ANSI/UL 4600 — Standard for Evaluation of Autonomous Products (Ed. 3)"
+title_cn: "ANSI/UL 4600 — 自主产品评估标准（第 3 版）"
+url: https://ulse.org/focus-areas/travel-safety/autonomous-vehicles/
+effective_date: "2023-09-12"
+automation_level: [L4, L5]
+topics: [sotif, functional_safety, testing, ads_performance, operational_domain]
+summary_en: "Claim-based safety-case standard for fully autonomous products without a human driver fallback. Covers hazards, operational design domain, runtime monitoring and field feedback."
+summary_cn: "面向无人驾驶产品（不依赖人类司机兜底）的声明式安全案例评估标准，覆盖危害、ODD、运行时监测与现场反馈。"
+related_standards: ["ISO 21448", "ISO/TS 5083"]
+last_updated: "2026-04-16"

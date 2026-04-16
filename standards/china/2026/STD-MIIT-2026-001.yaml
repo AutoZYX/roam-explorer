@@ -1,0 +1,15 @@
+id: STD-MIIT-2026-001
+date: "2026-02-19"
+org: MIIT
+org_full: "工业和信息化部装备工业一司"
+jurisdiction: china
+type: white_paper
+status: published
+title_en: "Development Status and Policy Outlook of Intelligent Connected Vehicles 2025 (white paper)"
+title_cn: "智能网联汽车发展现状与政策展望（2025）白皮书"
+url: https://www.miit.gov.cn/
+automation_level: [L2, L3, L4]
+topics: [ads_performance, testing, type_approval]
+summary_en: "Official white paper summarising 2025 policy milestones, pilot outcomes and 2026–2027 regulatory roadmap for intelligent connected vehicles."
+summary_cn: "官方白皮书，总结 2025 年智能网联汽车政策里程碑、试点成果，并给出 2026–2027 年监管路线图。"
+last_updated: "2026-04-16"

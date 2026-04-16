@@ -1,0 +1,15 @@
+id: STD-BJ-2023-002
+date: "2023-12-20"
+org: "Beijing HAD Zone"
+org_full: "北京市高级别自动驾驶示范区"
+jurisdiction: china
+type: white_paper
+status: published
+title_en: "Beijing HAD Zone 3.0 Construction Plan — vehicle-road-cloud integration"
+title_cn: "北京市高级别自动驾驶示范区 3.0 建设方案（车路云一体化）"
+url: https://www.bjcapedz.cn/
+automation_level: [L4]
+topics: [v2x, mapping, operational_domain, ads_performance]
+summary_en: "Beijing's 3.0 plan extending the demonstration zone to 600 km² and committing to vehicle-road-cloud integration infrastructure and standardised V2X interfaces."
+summary_cn: "北京示范区 3.0 方案，将示范区域扩展至 600 km²，明确车路云一体化基础设施与 V2X 标准化接口承诺。"
+last_updated: "2026-04-16"

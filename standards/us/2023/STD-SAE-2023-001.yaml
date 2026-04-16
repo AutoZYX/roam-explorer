@@ -1,0 +1,18 @@
+id: STD-SAE-2023-001
+date: "2023-06-02"
+org: SAE
+org_full: "SAE International"
+jurisdiction: us
+type: standard
+status: published
+document_number: "J3164_202306"
+title_en: "SAE J3164_202306 — Taxonomy and Definitions of Terms Related to Automated Driving System Behaviors and Maneuvers"
+title_cn: "SAE J3164_202306 — 自动驾驶系统行为与操纵术语定义"
+url: https://www.sae.org/standards/content/j3164_202306/
+effective_date: "2023-06-02"
+automation_level: [L3, L4]
+topics: [ads_performance]
+summary_en: "Glossary for ADS behaviors and maneuvers (lane change, merge, yield, etc.), intended as the shared vocabulary for scenario catalogs and safety cases."
+summary_cn: "ADS 行为与操纵术语词汇表（变道、汇入、让行等），作为场景库与安全论证的共享术语。"
+related_standards: ["ISO 34502", "UL 4600"]
+last_updated: "2026-04-16"

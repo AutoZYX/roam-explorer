@@ -1,0 +1,17 @@
+id: STD-SAMR-2024-001
+date: "2024-02-27"
+org: SAMR
+org_full: "国家市场监督管理总局（SAMR）"
+jurisdiction: china
+type: recall
+status: published
+title_en: "Regulatory Guidance on OTA Software Recall Filing for Intelligent Connected Vehicles"
+title_cn: "关于进一步加强智能网联汽车 OTA 召回管理工作的通知"
+url: https://www.samr.gov.cn/zt/zxqczl/
+effective_date: "2024-02-27"
+automation_level: [L1, L2, L3, L4]
+topics: [ota, recall, cybersecurity]
+summary_en: "Reinforces that safety-relevant OTA software updates must be filed as recalls with SAMR. Establishes acceptance criteria and timelines."
+summary_cn: "明确涉及车辆安全的 OTA 软件升级必须按召回向市场监督管理总局备案，规定验收与时限要求。"
+related_standards: ["GB 44496-2024", "UN R156"]
+last_updated: "2026-04-16"

@@ -1,0 +1,16 @@
+id: STD-BJ-2023-001
+date: "2023-07-07"
+org: "Beijing HAD Zone"
+org_full: "北京市高级别自动驾驶示范区工作办公室"
+jurisdiction: china
+type: regulation
+status: published
+title_en: "Beijing Interim Measures for Managing Unmanned Passenger Mobility Services"
+title_cn: "北京市智能网联汽车政策先行区无人化载人示范应用管理细则（试行）"
+url: https://www.bjcapedz.cn/
+effective_date: "2023-07-07"
+automation_level: [L4]
+topics: [type_approval, testing, ads_performance]
+summary_en: "Beijing's policy pilot zone rules enabling fully driverless robotaxi services (no safety driver, no in-cabin safety operator) in designated areas."
+summary_cn: "北京市政策先行区允许完全无人化（无主驾、无副驾安全员）Robotaxi 载人服务的管理细则。"
+last_updated: "2026-04-16"

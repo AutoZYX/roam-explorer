@@ -1,0 +1,15 @@
+id: STD-CAERI-2023-001
+date: "2023-11-02"
+org: CAERI
+org_full: "中国汽车工程研究院（中国汽研）"
+jurisdiction: china
+type: white_paper
+status: published
+title_en: "i-VISTA 2023 Intelligent Vehicle Integrated Systems Test and Assessment — annual report"
+title_cn: "i-VISTA 2023 智能指数年度报告"
+url: https://www.caeri.com.cn/
+automation_level: [L2, L3]
+topics: [testing, ads_performance, hmi]
+summary_en: "Annual industry benchmark covering ADAS performance, high-speed NOA, parking, and HMI usability across production vehicles."
+summary_cn: "年度量产车智能化评测榜单，覆盖 ADAS 性能、高速 NOA、泊车与人机交互可用性。"
+last_updated: "2026-04-16"

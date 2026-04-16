@@ -1,0 +1,18 @@
+id: STD-SAC-2021-001
+date: "2021-08-20"
+org: SAC/TC114
+org_full: "全国汽车标准化技术委员会（SAC/TC114）"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB/T 40429-2021"
+title_en: "GB/T 40429-2021 — Taxonomy of driving automation for vehicles"
+title_cn: "GB/T 40429-2021 — 汽车驾驶自动化分级"
+url: https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=19EC7FD16A6AA81DF48A88E36100A284
+effective_date: "2022-03-01"
+automation_level: [L0, L1, L2, L3, L4, L5]
+topics: [ads_performance]
+summary_en: "National recommended standard defining China's 0–5 driving automation levels, aligned with SAE J3016 but with nationally localised terminology (e.g. 有条件自动驾驶, 高度自动驾驶)."
+summary_cn: "国家推荐性标准，规定中国 0–5 级驾驶自动化分级，与 SAE J3016 对齐，术语本地化（如“有条件自动驾驶”“高度自动驾驶”）。"
+related_standards: ["SAE J3016"]
+last_updated: "2026-04-16"

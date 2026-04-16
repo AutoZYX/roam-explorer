@@ -1,0 +1,15 @@
+id: STD-JP-2023-001
+date: "2023-05-26"
+org: METI
+org_full: "経済産業省 / Ministry of Economy, Trade and Industry"
+jurisdiction: japan
+type: white_paper
+status: published
+title_en: "RoAD to the L4 — Mid-term progress report on the national Level-4 automated mobility service project"
+title_cn: "RoAD to the L4 · L4 自动驾驶移动服务国家项目中期进展报告"
+url: https://www.meti.go.jp/english/
+automation_level: [L4]
+topics: [ads_performance, testing, operational_domain]
+summary_en: "METI-led cross-ministry project report covering L4 pilot services across 40+ municipalities; defines operator capability maturity and funding lines."
+summary_cn: "经产省牵头、跨部委的 L4 自动驾驶移动服务项目报告，覆盖 40+ 市町村示范，明确运营商能力成熟度与资金渠道。"
+last_updated: "2026-04-16"

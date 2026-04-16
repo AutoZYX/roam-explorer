@@ -1,0 +1,18 @@
+id: STD-SAE-2024-001
+date: "2024-03-19"
+org: SAE
+org_full: "SAE International"
+jurisdiction: us
+type: standard
+status: published
+document_number: "J3237_202403"
+title_en: "SAE J3237_202403 — In-Vehicle Fallback Test Operator for Evaluation, Testing, and Deployment of Automated Driving System-Equipped Vehicles"
+title_cn: "SAE J3237_202403 — ADS 车辆评估、测试与部署中的车内备份测试操作员"
+url: https://www.sae.org/standards/content/j3237_202403/
+effective_date: "2024-03-19"
+automation_level: [L3, L4]
+topics: [testing, hmi]
+summary_en: "Specifies qualifications, training, workload constraints and performance monitoring for in-vehicle fallback test operators during ADS testing and limited deployment."
+summary_cn: "规定 ADS 测试与有限部署阶段车内备份测试操作员的资质、培训、工作量限制与表现监测。"
+related_standards: ["SAE J3018"]
+last_updated: "2026-04-16"

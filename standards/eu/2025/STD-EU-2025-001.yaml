@@ -1,0 +1,17 @@
+id: STD-EU-2025-001
+date: "2025-09-09"
+org: "European Commission"
+org_full: "European Commission — DG MOVE"
+jurisdiction: eu
+type: consultation
+status: consultation
+title_en: "Consultation on amending Regulation (EU) 2022/1426 to cover L4 urban operation and tele-operation"
+title_cn: "欧盟 2022/1426 条例修订征求意见 · 覆盖 L4 城市运营与远程驾驶"
+url: https://transport.ec.europa.eu/
+consultation_deadline: "2025-12-01"
+automation_level: [L4]
+topics: [teleoperation, type_approval, operational_domain, cybersecurity]
+summary_en: "EU consultation on extending the 2022/1426 fully-automated-vehicle type-approval framework to urban ODDs and to tele-operation / remote-assistance services."
+summary_cn: "欧盟征求意见稿，将 2022/1426 全自动驾驶型式认证框架扩展至城市 ODD 与远程驾驶 / 远程协助服务。"
+related_standards: ["STD-EU-2024-001"]
+last_updated: "2026-04-16"

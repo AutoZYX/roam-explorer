@@ -1,0 +1,17 @@
+id: STD-NHTSA-2025-001
+date: "2025-01-16"
+org: NHTSA
+org_full: "National Highway Traffic Safety Administration"
+jurisdiction: us
+type: regulation
+status: published
+title_en: "AV STEP — Automated Vehicle Transparency and Engagement for Safe Testing and Deployment (final rule)"
+title_cn: "NHTSA AV STEP · 自动驾驶车辆测试与部署透明度与参与计划（终版规则）"
+url: https://www.nhtsa.gov/automated-vehicles
+effective_date: "2025-03-17"
+automation_level: [L3, L4]
+topics: [testing, type_approval, data_recording]
+summary_en: "Voluntary programme giving developers a federal pathway for ADS deployment in exchange for safety-case transparency, incident reporting and standardised metrics."
+summary_cn: "自愿性联邦项目：开发者以安全论证透明度、事件报告与标准化指标，换取 ADS 部署的联邦路径。"
+related_standards: ["STD-NHTSA-2024-001"]
+last_updated: "2026-04-16"

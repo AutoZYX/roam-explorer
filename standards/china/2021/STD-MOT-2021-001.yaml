@@ -1,0 +1,17 @@
+id: STD-MOT-2021-001
+date: "2021-11-25"
+org: MOT
+org_full: "交通运输部"
+jurisdiction: china
+type: standard
+status: published
+document_number: "JT/T 1178.1-2021"
+title_en: "JT/T 1178.1-2021 — On-board video surveillance systems for commercial vehicles, Part 1: Technical requirements"
+title_cn: "JT/T 1178.1-2021 — 营运车辆车载视频监控系统 第 1 部分：技术要求"
+url: https://www.mot.gov.cn/jiaotongbiaozhun/list.html
+effective_date: "2022-04-01"
+automation_level: [L2, L3]
+topics: [data_recording]
+summary_en: "MOT industry standard for on-board video surveillance systems in commercial vehicles — a foundational piece for L3/L4 freight operations evidence chain."
+summary_cn: "交通运输部关于营运车辆车载视频监控系统的行业标准，是 L3/L4 货运场景证据链的基础。"
+last_updated: "2026-04-16"

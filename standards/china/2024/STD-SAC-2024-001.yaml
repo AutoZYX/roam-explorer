@@ -1,0 +1,19 @@
+id: STD-SAC-2024-001
+date: "2024-08-23"
+org: SAC/TC114/SC34
+org_full: "全国汽车标准化技术委员会智能网联汽车分技术委员会（SAC/TC114/SC34）"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB 44495-2024"
+title_en: "GB 44495-2024 — Technical requirements for vehicle cybersecurity"
+title_cn: "GB 44495-2024 — 汽车整车信息安全技术要求"
+url: https://www.miit.gov.cn/jgsj/zbys/qcgy/art/2024/art_f4a0cf4d3c6d4bb9a35b82e0f8e0fe8a.html
+effective_date: "2026-01-01"
+automation_level: [L1, L2, L3, L4]
+topics: [cybersecurity, type_approval]
+summary_en: "First mandatory (GB) standard on vehicle cybersecurity technical requirements in China. Applies to type approval and CCC certification; aligned conceptually with UN R155 and ISO/SAE 21434."
+summary_cn: "中国首部整车信息安全强制性国家标准，适用于型式认证与 CCC 认证，与 UN R155、ISO/SAE 21434 理念对齐。"
+impact_note: "Effective 1 Jan 2026 — becomes a de facto prerequisite for new vehicle models sold in China."
+related_standards: ["UN R155", "ISO/SAE 21434"]
+last_updated: "2026-04-16"

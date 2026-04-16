@@ -1,0 +1,16 @@
+id: STD-JP-2025-001
+date: "2025-10-14"
+org: MLIT
+org_full: "国土交通省 / MLIT"
+jurisdiction: japan
+type: regulation
+status: consultation
+title_en: "MLIT consultation on Safety Assessment Guidelines for Level 4 Automated Driving Vehicles (revision)"
+title_cn: "MLIT · L4 自动驾驶车辆安全评估指南修订征求意见"
+url: https://www.mlit.go.jp/en/
+consultation_deadline: "2025-12-15"
+automation_level: [L4]
+topics: [sotif, testing, ads_performance, operational_domain]
+summary_en: "Consultation on updated L4 safety assessment guidelines: scenario coverage requirements, residual-risk acceptance criteria, remote-operator duties."
+summary_cn: "L4 自动驾驶车辆安全评估指南修订征求意见：场景覆盖要求、残余风险验收准则、远程操作员义务。"
+last_updated: "2026-04-16"

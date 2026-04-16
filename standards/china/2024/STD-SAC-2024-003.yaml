@@ -1,0 +1,19 @@
+id: STD-SAC-2024-003
+date: "2024-08-23"
+org: SAC/TC114/SC34
+org_full: "全国汽车标准化技术委员会智能网联汽车分技术委员会"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB 44497-2024"
+title_en: "GB 44497-2024 — Technical requirements for data recording system for automated driving"
+title_cn: "GB 44497-2024 — 智能网联汽车自动驾驶数据记录系统"
+url: https://www.miit.gov.cn/jgsj/zbys/qcgy/
+effective_date: "2026-01-01"
+automation_level: [L3, L4]
+topics: [data_recording, type_approval]
+summary_en: "Mandatory national standard for DSSAD (Data Storage System for Automated Driving). Defines 14 event categories, required data elements and storage durations, broadly compatible with UN R157 Annex 6."
+summary_cn: "自动驾驶数据存储系统 (DSSAD) 国家强制性标准。规定 14 类事件、必记数据元素与存储时长，与 UN R157 附件 6 基本兼容。"
+impact_note: "Core record for regulatory investigations and future product-liability disputes in China."
+related_standards: ["UN R157"]
+last_updated: "2026-04-16"

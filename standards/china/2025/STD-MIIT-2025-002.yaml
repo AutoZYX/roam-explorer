@@ -1,0 +1,17 @@
+id: STD-MIIT-2025-002
+date: "2025-09-02"
+org: MIIT
+org_full: "工业和信息化部"
+jurisdiction: china
+type: consultation
+status: consultation
+title_en: "MIIT consultation on the Interim Administrative Measures for Intelligent Connected Vehicle Product Access"
+title_cn: "工信部 《智能网联汽车产品准入管理暂行办法》 公开征求意见"
+url: https://www.miit.gov.cn/
+consultation_deadline: "2025-10-15"
+automation_level: [L3, L4]
+topics: [type_approval, ads_performance, cybersecurity, data_recording]
+summary_en: "Draft administrative measures consolidating the L3/L4 access-and-road-operation pilot into a permanent regime. Clarifies OEM qualification, cybersecurity baseline, DSSAD requirements and event-reporting obligations."
+summary_cn: "将 L3/L4 准入与上路通行试点制度化的草案，明确主机厂资质、信息安全底线、DSSAD 要求与事故报告义务。"
+related_standards: ["STD-MIIT-2023-001", "GB 44495-2024", "GB 44497-2024"]
+last_updated: "2026-04-16"

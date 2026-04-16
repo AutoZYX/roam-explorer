@@ -1,0 +1,18 @@
+id: STD-SAE-2021-001
+date: "2021-04-30"
+org: SAE
+org_full: "SAE International"
+jurisdiction: us
+type: standard
+status: published
+document_number: "J3016_202104"
+title_en: "SAE J3016_202104 — Taxonomy and Definitions for Terms Related to Driving Automation Systems for On-Road Motor Vehicles"
+title_cn: "SAE J3016_202104 — 道路车辆驾驶自动化分级术语定义"
+url: https://www.sae.org/standards/content/j3016_202104/
+effective_date: "2021-04-30"
+automation_level: [L0, L1, L2, L3, L4, L5]
+topics: [ads_performance]
+summary_en: "The canonical 0–5 taxonomy of driving automation. Used globally by OEMs and regulators as the reference definition framework."
+summary_cn: "全球公认的 0–5 级驾驶自动化分级术语，整车企业与监管机构的基础参考。"
+related_standards: ["GB/T 40429-2021"]
+last_updated: "2026-04-16"

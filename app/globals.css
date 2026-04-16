@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #faf9f5;
+  --text: #1a1a18;
+  --accent: #2f5ea8;
+  --accent-light: #c9d8f0;
+  --accent-hover: #274c8a;
+  --border: #e0ded6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --muted: #6b6960;
+  --badge-bg: #f0eeea;
+  --radius: 10px;
+
+  /* status palette */
+  --status-published: #1f7a4a;
+  --status-draft: #a06a00;
+  --status-consultation: #6b4fb0;
+  --status-revised: #2f5ea8;
+  --status-withdrawn: #8a8a8a;
+  --status-pending: #c06a2a;
+
+  /* jurisdiction palette */
+  --juris-international: #2f5ea8;
+  --juris-china: #b8303d;
+  --juris-us: #1e4d88;
+  --juris-eu: #0057b7;
+  --juris-uk: #102a67;
+  --juris-japan: #4a148c;
+  --juris-korea: #0070a6;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card-bg);
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", Georgia, "Songti SC", serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: var(--badge-bg);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+
+code, pre { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }

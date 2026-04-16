@@ -1,0 +1,18 @@
+id: STD-SAC-2023-001
+date: "2023-12-28"
+org: SAC/TC114/SC34
+org_full: "全国汽车标准化技术委员会智能网联汽车分技术委员会"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB/T 42666-2023"
+title_en: "GB/T 42666-2023 — Road vehicles — Generic requirements for cybersecurity engineering"
+title_cn: "GB/T 42666-2023 — 道路车辆 · 网络安全工程通用要求"
+url: https://openstd.samr.gov.cn/bzgk/gb/
+effective_date: "2024-08-01"
+automation_level: [L1, L2, L3, L4]
+topics: [cybersecurity]
+summary_en: "Recommended GB standard mirroring ISO/SAE 21434 engineering process requirements, serving as the technical reference for GB 44495 type approval."
+summary_cn: "推荐性国家标准，采标 ISO/SAE 21434 的工程过程要求，作为 GB 44495 强标落地的技术参考。"
+related_standards: ["ISO/SAE 21434", "GB 44495-2024"]
+last_updated: "2026-04-16"

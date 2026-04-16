@@ -1,0 +1,17 @@
+id: STD-CATARC-2024-001
+date: "2024-10-11"
+org: CATARC
+org_full: "中国汽车技术研究中心（CATARC）"
+jurisdiction: china
+type: standard
+status: published
+document_number: "C-NCAP 2024"
+title_en: "C-NCAP 2024 — Active Safety and Assisted-Driving test protocol update"
+title_cn: "C-NCAP 2024 版 · 主动安全与辅助驾驶测试规程更新"
+url: https://www.cncap.org/
+effective_date: "2024-07-01"
+automation_level: [L2]
+topics: [testing, ads_performance, hmi]
+summary_en: "C-NCAP 2024 introduces new AEB scenarios (VRU, two-wheelers, night time), Lane Support System (LSS), and Human-Machine Interaction misuse-detection tests."
+summary_cn: "C-NCAP 2024 新增 AEB（弱势道路使用者 / 两轮车 / 夜间）测试、车道保持辅助 (LSS) 与人机交互误用测试。"
+last_updated: "2026-04-16"

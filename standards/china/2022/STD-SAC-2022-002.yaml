@@ -1,0 +1,17 @@
+id: STD-SAC-2022-002
+date: "2022-12-29"
+org: SAC/TC114
+org_full: "全国汽车标准化技术委员会"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB/T 42295-2022"
+title_en: "GB/T 42295-2022 — Electric vehicles — Cybersecurity requirements for charging system"
+title_cn: "GB/T 42295-2022 — 电动汽车充电系统信息安全要求"
+url: https://openstd.samr.gov.cn/
+effective_date: "2023-07-01"
+automation_level: [L0, L1, L2, L3]
+topics: [cybersecurity]
+summary_en: "Recommended GB standard on cybersecurity requirements for electric-vehicle charging systems — increasingly relevant as ADS fleets depend on EV charging infrastructure."
+summary_cn: "电动汽车充电系统信息安全要求推荐性国家标准；随着自动驾驶车队依赖电动化基础设施，重要性上升。"
+last_updated: "2026-04-16"

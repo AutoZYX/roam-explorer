@@ -1,0 +1,18 @@
+id: STD-ISO-2024-001
+date: "2024-11-15"
+org: ISO
+org_full: "International Organization for Standardization — TC 22/SC 33"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO/TS 5083:2024"
+title_en: "ISO/TS 5083:2024 — Road vehicles — Safety for automated driving systems — Design, verification and validation"
+title_cn: "ISO/TS 5083:2024 — 道路车辆 · 自动驾驶系统安全 · 设计、验证与确认"
+url: https://www.iso.org/standard/81920.html
+effective_date: "2024-11-15"
+automation_level: [L3, L4]
+topics: [sotif, functional_safety, testing, ads_performance, operational_domain]
+summary_en: "Consolidates best practice for designing, verifying and validating safety of L3/L4 ADS. Bridges ISO 26262, ISO 21448, ISO 34502 and UL 4600 with a positive-risk-balance argumentation structure."
+summary_cn: "面向 L3/L4 自动驾驶系统安全设计、验证与确认的最佳实践总结，连接 ISO 26262、ISO 21448、ISO 34502 与 UL 4600，并采用“正向风险平衡”论证结构。"
+related_standards: ["ISO 26262", "ISO 21448", "ISO 34502", "UL 4600"]
+last_updated: "2026-04-16"

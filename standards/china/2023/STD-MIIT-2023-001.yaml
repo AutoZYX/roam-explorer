@@ -1,0 +1,18 @@
+id: STD-MIIT-2023-001
+date: "2023-11-17"
+org: MIIT
+org_full: "工业和信息化部、公安部、住建部、交通运输部"
+jurisdiction: china
+type: regulation
+status: published
+title_en: "Notice on Launching the Pilot Programme for Access and Road Operation of Intelligent Connected Vehicles"
+title_cn: "关于开展智能网联汽车准入和上路通行试点工作的通知"
+url: https://www.miit.gov.cn/zwgk/zcwj/wjfb/tg/art/2023/art_1b9e5b57c2fa41c9a8ba9b1d2ab0ab3a.html
+effective_date: "2023-11-17"
+automation_level: [L3, L4]
+topics: [type_approval, testing, ads_performance]
+summary_en: "Four-ministry notice launching a nationwide pilot for L3/L4 intelligent connected vehicle access approval and road operation. Selected OEMs may apply for pilot vehicle type approval paired with pilot operating entities."
+summary_cn: "工信部等四部委发布，启动全国范围 L3/L4 智能网联汽车准入与上路通行试点。入选整车企业可配合试点运营主体申请试点产品准入。"
+impact_note: "First national pathway to L3/L4 type approval in China."
+related_standards: ["GB 44495", "GB 44496", "GB 44497"]
+last_updated: "2026-04-16"

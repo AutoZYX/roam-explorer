@@ -1,0 +1,18 @@
+id: STD-SAC-2025-001
+date: "2025-03-14"
+org: SAC/TC114/SC34
+org_full: "全国汽车标准化技术委员会智能网联汽车分技术委员会"
+jurisdiction: china
+type: consultation
+status: consultation
+document_number: "GB 《智能网联汽车自动驾驶功能道路试验与安全性要求》（征求意见稿）"
+title_en: "GB — Road-test and safety requirements for automated driving functions of intelligent connected vehicles (consultation draft)"
+title_cn: "GB 《智能网联汽车自动驾驶功能道路试验与安全性要求》（征求意见稿）"
+url: http://www.catarc.org.cn/
+consultation_deadline: "2025-05-15"
+automation_level: [L3, L4]
+topics: [testing, ads_performance, sotif, operational_domain]
+summary_en: "Consultation draft on road-test and safety requirements for ADS functions. Covers scenario categories, test methods, acceptance criteria, minimum risk manoeuvre and tele-operation fallback."
+summary_cn: "自动驾驶功能道路试验与安全性要求征求意见稿，覆盖场景分类、测试方法、验收准则、最小风险策略与远程接管。"
+related_standards: ["ISO 34502", "UN R157"]
+last_updated: "2026-04-16"

@@ -1,0 +1,18 @@
+id: STD-IEEE-2023-001
+date: "2023-10-20"
+org: IEEE
+org_full: "IEEE Standards Association"
+jurisdiction: us
+type: standard
+status: published
+document_number: "IEEE 2848-2023"
+title_en: "IEEE 2848-2023 — Verification and Validation Methods for Automated Driving Systems"
+title_cn: "IEEE 2848-2023 — 自动驾驶系统验证与确认方法"
+url: https://standards.ieee.org/ieee/2848/
+effective_date: "2023-10-20"
+automation_level: [L3, L4]
+topics: [testing, sotif, ads_performance]
+summary_en: "Methods and workflow for verification and validation of ADS, including simulation-based testing, track testing, and public-road testing allocation."
+summary_cn: "ADS 验证与确认的方法与流程，包含仿真测试、封闭场地测试与公开道路测试的工作量分配。"
+related_standards: ["ISO 34502", "UL 4600"]
+last_updated: "2026-04-16"

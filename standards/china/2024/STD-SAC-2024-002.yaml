@@ -1,0 +1,18 @@
+id: STD-SAC-2024-002
+date: "2024-08-23"
+org: SAC/TC114/SC34
+org_full: "全国汽车标准化技术委员会智能网联汽车分技术委员会"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB 44496-2024"
+title_en: "GB 44496-2024 — General technical requirements for software update of automobiles"
+title_cn: "GB 44496-2024 — 汽车软件升级通用技术要求"
+url: https://www.miit.gov.cn/jgsj/zbys/qcgy/
+effective_date: "2026-01-01"
+automation_level: [L1, L2, L3, L4]
+topics: [ota, cybersecurity, type_approval]
+summary_en: "Mandatory GB standard establishing software update management (SUMS-equivalent) and OTA technical requirements for vehicles sold in China."
+summary_cn: "整车软件升级管理（等效 SUMS）与 OTA 技术要求的国家强制性标准。"
+related_standards: ["UN R156", "ISO 24089"]
+last_updated: "2026-04-16"

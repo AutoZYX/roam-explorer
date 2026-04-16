@@ -1,0 +1,18 @@
+id: STD-SZ-2022-001
+date: "2022-06-23"
+org: "Shenzhen SPC"
+org_full: "深圳市人民代表大会常务委员会"
+jurisdiction: china
+type: regulation
+status: published
+document_number: "深圳经济特区智能网联汽车管理条例"
+title_en: "Shenzhen Special Economic Zone Regulations on the Management of Intelligent and Connected Vehicles"
+title_cn: "深圳经济特区智能网联汽车管理条例"
+url: http://www.szrd.gov.cn/rdlyzt/rdlyfzzt/flfg/content/post_783366.html
+effective_date: "2022-08-01"
+automation_level: [L3, L4, L5]
+topics: [type_approval, testing, ads_performance, data_recording]
+summary_en: "China's first local legislation covering L3/L4 testing, demonstration and commercial operation of intelligent & connected vehicles, including liability attribution for fully driverless operation."
+summary_cn: "中国首部针对智能网联汽车测试、示范与商业化运营的地方立法，覆盖 L3/L4/L5，明确完全无人驾驶状态下的事故责任划分规则。"
+impact_note: "Legal template repeatedly cited by other pilot cities (Shanghai, Chongqing, Wuxi)."
+last_updated: "2026-04-16"

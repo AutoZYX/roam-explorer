@@ -1,0 +1,16 @@
+id: STD-MIIT-2025-001
+date: "2025-04-16"
+org: MIIT
+org_full: "工业和信息化部装备工业一司"
+jurisdiction: china
+type: meeting_notice
+status: published
+title_en: "MIIT meeting on further regulating the naming and promotion of Combined Driving Assistance (ADAS/L2) systems"
+title_cn: "工信部关于进一步规范组合驾驶辅助（ADAS/L2）宣传的行业会议通知"
+url: https://www.miit.gov.cn/
+automation_level: [L2]
+topics: [hmi, ads_performance]
+summary_en: "MIIT convened OEMs and industry associations to curb misleading naming and marketing of combined driving assistance systems (e.g. labelling L2 products as ‘autonomous driving’ or ‘intelligent driving’)."
+summary_cn: "工信部召集主机厂与行业协会，要求停止将 L2 级组合驾驶辅助产品宣传为“自动驾驶”“智能驾驶”等误导性表述。"
+impact_note: "Triggered a wave of branding updates by major Chinese OEMs in Q2 2025."
+last_updated: "2026-04-16"

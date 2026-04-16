@@ -1,0 +1,18 @@
+id: STD-ISO-2022-002
+date: "2022-11-15"
+org: ISO
+org_full: "International Organization for Standardization — TC 22/SC 33"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO 34502:2022"
+title_en: "ISO 34502:2022 — Road vehicles — Test scenarios for automated driving systems — Scenario-based safety evaluation framework"
+title_cn: "ISO 34502:2022 — 道路车辆 · 自动驾驶测试场景 · 基于场景的安全评估框架"
+url: https://www.iso.org/standard/78951.html
+effective_date: "2022-11-15"
+automation_level: [L3, L4]
+topics: [testing, sotif, ads_performance, operational_domain]
+summary_en: "Defines a scenario-based safety evaluation framework for ADS covering scenario categorisation, parameter selection, and acceptance criteria. Complementary to ISO 21448 (SOTIF)."
+summary_cn: "为自动驾驶系统制定基于场景的安全评估框架：场景分类、参数选取与验收准则。作为 ISO 21448 预期功能安全的补充。"
+related_standards: ["ISO 21448", "ISO 34503", "UL 4600"]
+last_updated: "2026-04-16"

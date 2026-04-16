@@ -1,0 +1,17 @@
+id: STD-SAC-2022-001
+date: "2022-04-15"
+org: SAC/TC114
+org_full: "全国汽车标准化技术委员会"
+jurisdiction: china
+type: standard
+status: published
+document_number: "GB/T 40856-2021"
+title_en: "GB/T 40856-2021 — Information security technology — General technical requirements for in-vehicle information interaction systems"
+title_cn: "GB/T 40856-2021 — 车载信息交互系统信息安全技术要求"
+url: https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7E5A1E47E21D96D4A4FE5D3CD9C9D5F2
+effective_date: "2022-05-01"
+automation_level: [L1, L2, L3]
+topics: [cybersecurity]
+summary_en: "Recommended national standard on information security technical requirements for in-vehicle information interaction (IVI) systems, covering authentication, data protection, and secure update."
+summary_cn: "面向车载信息交互系统 (IVI) 的信息安全技术要求推荐性国家标准，覆盖身份认证、数据保护与安全升级。"
+last_updated: "2026-04-16"

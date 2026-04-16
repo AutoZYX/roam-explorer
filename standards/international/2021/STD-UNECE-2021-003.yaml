@@ -1,0 +1,18 @@
+id: STD-UNECE-2021-003
+date: "2021-01-22"
+org: UNECE WP.29
+org_full: "UN Economic Commission for Europe — World Forum for Harmonization of Vehicle Regulations (WP.29)"
+jurisdiction: international
+type: regulation
+status: published
+document_number: "UN Regulation No. 156"
+title_en: "UN Regulation No. 156 — Uniform provisions concerning the approval of vehicles with regards to software update and software updates management system"
+title_cn: "联合国第 156 号法规 — 软件升级与软件升级管理体系型式认证统一规定"
+url: https://unece.org/transport/documents/2021/03/standards/un-regulation-no-156-software-update-and-software-update
+effective_date: "2022-07-01"
+automation_level: [L1, L2, L3, L4]
+topics: [ota, cybersecurity, type_approval]
+summary_en: "Introduces the Software Update Management System (SUMS) and RxSWIN (Regulation Software Identification Number) for tracking regulation-relevant software. Requires documentation, rollback and integrity protection for OTA updates."
+summary_cn: "引入软件升级管理体系 (SUMS) 与软件版本识别码 RxSWIN。要求对影响型式认证的软件升级进行文档化管理，OTA 需具备完整性保护与回滚机制。"
+related_standards: ["UN R155", "ISO 24089"]
+last_updated: "2026-04-16"

@@ -1,0 +1,18 @@
+id: STD-ISO-2021-001
+date: "2021-08-31"
+org: "ISO/SAE"
+org_full: "ISO/SAE Joint Working Group"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO/SAE 21434:2021"
+title_en: "ISO/SAE 21434:2021 — Road vehicles — Cybersecurity engineering"
+title_cn: "ISO/SAE 21434:2021 — 道路车辆 · 信息安全工程"
+url: https://www.iso.org/standard/70918.html
+effective_date: "2021-08-31"
+automation_level: [L0, L1, L2, L3, L4]
+topics: [cybersecurity]
+summary_en: "Process-oriented framework for cybersecurity engineering across the vehicle lifecycle: from concept, design and development through production, operations, maintenance and decommissioning. Aligned with UN R155 CSMS requirements."
+summary_cn: "面向整车全生命周期的信息安全工程框架，覆盖概念、设计开发、生产、运营、维护与报废阶段；与 UN R155 CSMS 要求对齐。"
+related_standards: ["UN R155", "ISO 24089"]
+last_updated: "2026-04-16"

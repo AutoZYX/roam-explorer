@@ -1,0 +1,18 @@
+id: STD-ISO-2022-003
+date: "2022-09-26"
+org: ISO
+org_full: "International Organization for Standardization — TC 204"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO 22737:2021"
+title_en: "ISO 22737:2021 — Intelligent transport systems — Low-speed automated driving (LSAD) systems for predefined routes — Performance requirements, system requirements and performance test procedures"
+title_cn: "ISO 22737:2021 — 智能运输系统 · 预定路线低速自动驾驶系统 · 性能要求、系统要求与性能测试程序"
+url: https://www.iso.org/standard/73767.html
+effective_date: "2021-02-01"
+automation_level: [L4]
+topics: [ads_performance, testing, operational_domain]
+summary_en: "Performance, system and test requirements for fixed-route low-speed automated driving (shuttles, campus vehicles, last-mile services)."
+summary_cn: "固定路线低速自动驾驶（接驳车、园区车、末端接驳）的性能、系统与测试要求。"
+related_standards: ["ISO 34502"]
+last_updated: "2026-04-16"

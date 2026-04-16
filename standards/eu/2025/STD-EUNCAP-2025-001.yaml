@@ -1,0 +1,16 @@
+id: STD-EUNCAP-2025-001
+date: "2025-11-04"
+org: "Euro NCAP"
+org_full: "European New Car Assessment Programme"
+jurisdiction: eu
+type: consultation
+status: consultation
+title_en: "Euro NCAP Vision 2030 — roadmap consultation for Automated Driving assessment"
+title_cn: "Euro NCAP Vision 2030 · 自动驾驶评估路线图征求意见"
+url: https://www.euroncap.com/en/for-engineers/publications/
+consultation_deadline: "2026-02-28"
+automation_level: [L3, L4]
+topics: [testing, ads_performance, sotif]
+summary_en: "Roadmap consultation for extending Euro NCAP assessments to L3/L4 ADS, covering urban ODDs, vulnerable road user interaction and safety-case transparency."
+summary_cn: "Euro NCAP 将评估体系扩展至 L3/L4 ADS 的路线图征求意见，覆盖城市 ODD、弱势道路使用者交互与安全论证透明度。"
+last_updated: "2026-04-16"

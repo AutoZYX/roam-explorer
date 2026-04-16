@@ -1,0 +1,19 @@
+id: STD-SAC-2025-002
+date: "2025-10-08"
+org: SAC/TC114/SC34
+org_full: "全国汽车标准化技术委员会智能网联汽车分技术委员会"
+jurisdiction: china
+type: consultation
+status: consultation
+document_number: "GB 《智能网联汽车远程驾驶系统技术要求》（征求意见稿）"
+title_en: "GB — Technical requirements for remote driving (tele-operation) systems of intelligent connected vehicles (consultation draft)"
+title_cn: "GB 《智能网联汽车远程驾驶系统技术要求》（征求意见稿）"
+url: http://www.catarc.org.cn/
+consultation_deadline: "2026-01-10"
+automation_level: [L3, L4]
+topics: [teleoperation, hmi, cybersecurity, operational_domain]
+summary_en: "Consultation draft on remote driving (tele-operation) systems: remote pilot workstation, 4G/5G link performance, latency tolerances, HMI, cybersecurity and failover to minimum risk manoeuvre."
+summary_cn: "远程驾驶系统技术要求征求意见稿：远程驾驶工位、4G/5G 链路性能、时延容忍、人机交互、信息安全与最小风险策略回退。"
+impact_note: "Drives the teleoperation platform requirements landscape in China."
+related_standards: ["ISO/DIS 24956"]
+last_updated: "2026-04-16"

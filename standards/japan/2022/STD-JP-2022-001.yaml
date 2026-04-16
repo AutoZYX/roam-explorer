@@ -1,0 +1,16 @@
+id: STD-JP-2022-001
+date: "2022-04-19"
+org: MLIT
+org_full: "国土交通省 / Ministry of Land, Infrastructure, Transport and Tourism"
+jurisdiction: japan
+type: regulation
+status: published
+title_en: "Revised Road Traffic Act permitting Level 4 specified automated driving services"
+title_cn: "修订版《道路交通法》· 允许特定 L4 自动驾驶服务"
+url: https://www.mlit.go.jp/en/
+effective_date: "2023-04-01"
+automation_level: [L4]
+topics: [type_approval, ads_performance, operational_domain]
+summary_en: "Japan's 2022 Road Traffic Act revision permits ‘specified automated driving service’ at L4 under area- and route-restricted operational design domains, subject to prefectural police approval."
+summary_cn: "日本 2022 年《道路交通法》修订，允许经都道府县公安委员会许可、在限定区域 / 路线 ODD 内提供“特定自动驾驶服务”(L4)。"
+last_updated: "2026-04-16"

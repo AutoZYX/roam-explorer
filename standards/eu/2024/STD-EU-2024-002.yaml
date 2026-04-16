@@ -1,0 +1,17 @@
+id: STD-EU-2024-002
+date: "2024-07-12"
+org: "European Parliament"
+org_full: "European Parliament & Council"
+jurisdiction: eu
+type: regulation
+status: published
+document_number: "Regulation (EU) 2024/1689 (AI Act)"
+title_en: "Regulation (EU) 2024/1689 — Artificial Intelligence Act"
+title_cn: "欧盟 2024/1689 条例 · 人工智能法案 (AI Act)"
+url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+effective_date: "2026-08-02"
+automation_level: [L2, L3, L4]
+topics: [ads_performance, cybersecurity, ethics]
+summary_en: "Horizontal AI Act. Safety components of vehicles are covered via the existing sectoral regime (UN / EU type approval), but transparency, data governance and post-market monitoring obligations still apply."
+summary_cn: "横向 AI 法案。车辆安全组件通过既有行业型式认证体系衔接，但透明度、数据治理与上市后监测义务仍然适用。"
+last_updated: "2026-04-16"

@@ -1,0 +1,17 @@
+id: STD-ISO-2023-002
+date: "2023-12-05"
+org: ISO
+org_full: "International Organization for Standardization"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO 23150:2023"
+title_en: "ISO 23150:2023 — Road vehicles — Data communication between sensors and data fusion unit for automated driving functions — Logical interface"
+title_cn: "ISO 23150:2023 — 道路车辆 · 自动驾驶功能传感器与数据融合单元通信 · 逻辑接口"
+url: https://www.iso.org/standard/84553.html
+effective_date: "2023-12-05"
+automation_level: [L2, L3, L4]
+topics: [ads_performance]
+summary_en: "Logical interface specification between perception sensors (camera/radar/lidar) and the data-fusion unit, enabling multi-supplier ADS integration."
+summary_cn: "感知传感器（摄像头 / 毫米波雷达 / 激光雷达）与数据融合单元之间的逻辑接口规范，支持多供应商 ADS 集成。"
+last_updated: "2026-04-16"

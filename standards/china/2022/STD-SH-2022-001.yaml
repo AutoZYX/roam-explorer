@@ -1,0 +1,17 @@
+id: STD-SH-2022-001
+date: "2022-09-22"
+org: "Shanghai Pudong"
+org_full: "上海市人民代表大会常务委员会"
+jurisdiction: china
+type: regulation
+status: published
+document_number: "浦东新区无驾驶人智能网联汽车创新应用规定"
+title_en: "Pudong New Area Regulation on Innovative Application of Driverless Intelligent Connected Vehicles"
+title_cn: "上海市浦东新区无驾驶人智能网联汽车创新应用规定"
+url: https://www.shanghai.gov.cn/
+effective_date: "2022-10-01"
+automation_level: [L4]
+topics: [type_approval, ads_performance, data_recording]
+summary_en: "Shanghai Pudong's standalone legislation on driverless ICV operation, including authorisation, liability and insurance framework."
+summary_cn: "上海浦东新区针对无驾驶人智能网联汽车运营的单行立法，涵盖授权、责任与保险框架。"
+last_updated: "2026-04-16"

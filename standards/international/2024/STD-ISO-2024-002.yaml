@@ -1,0 +1,18 @@
+id: STD-ISO-2024-002
+date: "2024-06-07"
+org: ISO
+org_full: "International Organization for Standardization"
+jurisdiction: international
+type: standard
+status: published
+document_number: "ISO 34503:2023"
+title_en: "ISO 34503:2023 — Road vehicles — Test scenarios for automated driving systems — Specification for operational design domain"
+title_cn: "ISO 34503:2023 — 道路车辆 · 自动驾驶测试场景 · 运行设计域规范"
+url: https://www.iso.org/standard/78952.html
+effective_date: "2023-08-28"
+automation_level: [L3, L4]
+topics: [operational_domain, testing, ads_performance]
+summary_en: "Specifies a format and attribute taxonomy for describing operational design domains, enabling interoperable scenario libraries across suppliers and regulators."
+summary_cn: "规定运行设计域的描述格式与属性分类法，支撑跨供应商与监管机构的可互操作场景库。"
+related_standards: ["ISO 34502", "SAE J3206"]
+last_updated: "2026-04-16"
