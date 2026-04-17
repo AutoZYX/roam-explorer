@@ -38,14 +38,58 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // Multi-turn payload:
+  //   { messages: Array<{ role: "user" | "assistant", content: string }> }
+  //
+  // The last message must be role="user" (the new question). We cap the
+  // history at 20 messages (~10 turns) to keep tokens bounded — the system
+  // prompt carries all the dataset facts so dropping old chit-chat doesn't
+  // lose grounding.
+  //
+  // Legacy single-question payload (`{ question: string }`) is still
+  // accepted so older clients don't break during the rollout.
   const body = await request.json();
-  const question = body.question?.trim();
-  if (!question || question.length > 500) {
+  type Msg = { role: "user" | "assistant"; content: string };
+
+  let messages: Msg[];
+  if (Array.isArray(body.messages) && body.messages.length > 0) {
+    messages = body.messages
+      .filter((m: unknown): m is Msg =>
+        typeof m === "object" &&
+        m !== null &&
+        (((m as Msg).role === "user") || ((m as Msg).role === "assistant")) &&
+        typeof (m as Msg).content === "string"
+      )
+      .map((m: Msg) => ({ role: m.role, content: m.content.trim() }))
+      .filter((m: Msg) => m.content.length > 0);
+  } else if (typeof body.question === "string") {
+    messages = [{ role: "user", content: body.question.trim() }];
+  } else {
     return NextResponse.json(
-      { error: "Question is required (max 500 chars)" },
+      { error: "`messages` array or `question` string is required" },
       { status: 400 }
     );
   }
+
+  if (messages.length === 0) {
+    return NextResponse.json({ error: "No valid messages" }, { status: 400 });
+  }
+  const last = messages[messages.length - 1];
+  if (last.role !== "user") {
+    return NextResponse.json(
+      { error: "Last message must be role=user" },
+      { status: 400 }
+    );
+  }
+  if (last.content.length > 500) {
+    return NextResponse.json(
+      { error: "Question too long (max 500 chars)" },
+      { status: 400 }
+    );
+  }
+
+  // Cap history to last 20 messages.
+  const capped = messages.slice(-20);
 
   if (!cachedContext) {
     cachedContext = buildSystemContext();
@@ -58,7 +102,7 @@ export async function POST(request: NextRequest) {
       model: "claude-sonnet-4-20250514",
       max_tokens: 1024,
       system: cachedContext,
-      messages: [{ role: "user", content: question }],
+      messages: capped,
     });
 
     const text =

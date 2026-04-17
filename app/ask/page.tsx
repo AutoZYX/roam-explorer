@@ -38,14 +38,19 @@ export default function AskPage() {
     setInput("");
 
     const userMsg: Message = { role: "user", content: q };
-    setMessages((prev) => [...prev, userMsg]);
+    // Build the history we'll send in one shot — React's setState is async,
+    // so we can't rely on `messages` being updated when we call fetch below.
+    const nextHistory = [...messages, userMsg];
+    setMessages(nextHistory);
     setLoading(true);
 
     try {
+      // Multi-turn: send the full conversation so Claude has context for
+      // follow-ups. Server caps to last 20 messages.
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: q }),
+        body: JSON.stringify({ messages: nextHistory }),
       });
       const data = await res.json();
       const assistantMsg: Message = {
@@ -67,12 +72,27 @@ export default function AskPage() {
     }
   }
 
+  function handleClear() {
+    setMessages([]);
+    setInput("");
+  }
+
   return (
     <RegisterGate>
       <div className="flex flex-col h-[calc(100vh-12rem)]">
-        <div className="mb-4">
-          <h1 className="text-3xl mb-2">{t("ask.title")}</h1>
-          <p className="text-[var(--muted)]">{t("ask.desc")}</p>
+        <div className="mb-4 flex items-end justify-between gap-4">
+          <div>
+            <h1 className="text-3xl mb-2">{t("ask.title")}</h1>
+            <p className="text-[var(--muted)]">{t("ask.desc")}</p>
+          </div>
+          {messages.length > 0 && (
+            <button
+              onClick={handleClear}
+              className="shrink-0 rounded-lg border border-[var(--border)] bg-[var(--card-bg)] px-3 py-2 text-sm text-[var(--muted)] hover:text-[var(--text)] hover:border-[var(--accent)] transition-colors cursor-pointer"
+            >
+              {t("ask.clear")}
+            </button>
+          )}
         </div>
 
         {/* Messages */}
