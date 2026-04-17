@@ -136,6 +136,7 @@ const translations = {
   "ask.placeholder": { en: "Ask about robotaxi incidents...", zh: "输入你的问题..." },
   "ask.button": { en: "Ask", zh: "提问" },
   "ask.thinking": { en: "Thinking...", zh: "思考中..." },
+  "ask.clear": { en: "New chat", zh: "新对话" },
 
   // Registration
   "reg.title": { en: "Sign up to use Ask ROAM", zh: "注册使用智能问答" },
