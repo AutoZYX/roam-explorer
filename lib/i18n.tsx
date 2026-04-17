@@ -140,14 +140,17 @@ const translations = {
   // Registration
   "reg.title": { en: "Sign up to use Ask ROAM", zh: "注册使用智能问答" },
   "reg.desc": {
-    en: "Enter your email to access AI-powered search across the ROAM incident database. Free, no password needed.",
-    zh: "输入邮箱即可使用 AI 搜索 ROAM 事件数据库。免费，无需密码。",
+    en: "Leave your work email and organization to access AI-powered search across the ROAM incident database. Free, no password needed.",
+    zh: "请留下您的工作邮箱与所在单位即可使用 AI 搜索 ROAM 事件数据库。免费，无需密码。",
   },
-  "reg.email": { en: "Email address", zh: "邮箱地址" },
+  "reg.email": { en: "Work email", zh: "工作邮箱" },
+  "reg.company": { en: "Organization / Company", zh: "所在单位 / 公司" },
   "reg.submit": { en: "Get access", zh: "获取访问权限" },
+  "reg.email_invalid": { en: "Please enter a valid work email", zh: "请输入有效的工作邮箱" },
+  "reg.company_required": { en: "Please enter your organization", zh: "请填写所在单位" },
   "reg.privacy": {
-    en: "We only use your email for product updates. No spam.",
-    zh: "邮箱仅用于产品更新通知，不会发送垃圾邮件。",
+    en: "We only use your info for contact. No spam.",
+    zh: "信息仅用于联系，不会对外分享。",
   },
 
   // Footer — 与 roam.autozyx.com 底部一致

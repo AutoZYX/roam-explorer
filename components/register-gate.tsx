@@ -3,10 +3,17 @@
 import { useState, useEffect, ReactNode } from "react";
 import { useI18n } from "@/lib/i18n";
 
+// Simple email check — same shape as the server-side regex in
+// /api/register, so the client-side error mirrors what the server
+// would reject.
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function RegisterGate({ children }: { children: ReactNode }) {
   const { t } = useI18n();
   const [registered, setRegistered] = useState(false);
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [checking, setChecking] = useState(true);
 
@@ -18,21 +25,32 @@ export default function RegisterGate({ children }: { children: ReactNode }) {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const trimmed = email.trim();
-    if (!trimmed || !trimmed.includes("@")) return;
+    const trimmedEmail = email.trim();
+    const trimmedCompany = company.trim();
+    if (!EMAIL_RE.test(trimmedEmail)) {
+      setError(t("reg.email_invalid"));
+      return;
+    }
+    if (!trimmedCompany) {
+      setError(t("reg.company_required"));
+      return;
+    }
+    setError(null);
     setLoading(true);
 
     try {
+      // Fire-and-forget — don't block the user if the relay is slow or
+      // fails. The API route writes a structured log line as a backup.
       await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
+        body: JSON.stringify({ email: trimmedEmail, company: trimmedCompany }),
       });
     } catch {
-      // Continue even if API fails — don't block the user
+      // Swallow — see comment above.
     }
 
-    localStorage.setItem("roam-registered", trimmed);
+    localStorage.setItem("roam-registered", trimmedEmail);
     setRegistered(true);
     setLoading(false);
   }
@@ -62,6 +80,19 @@ export default function RegisterGate({ children }: { children: ReactNode }) {
             placeholder={t("reg.email")}
             className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50"
           />
+          <input
+            type="text"
+            required
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            placeholder={t("reg.company")}
+            className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50"
+          />
+          {error && (
+            <p className="text-xs text-red-500 text-center" role="alert">
+              {error}
+            </p>
+          )}
           <button
             type="submit"
             disabled={loading}
